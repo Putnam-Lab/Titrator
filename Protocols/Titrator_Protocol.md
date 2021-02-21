@@ -154,22 +154,19 @@ Contents
 
 8. <a name="Data_Analysis"></a> **Data_Analysis**
 
-      1. After the titration is complete, you must gather the data and export it to the current folder. The titrations will automatically export, but the mass of the sample will not.
-      2. To gather the mass data, you must export it to the current folder.
-      3. Go Data > Result Sets > Last 24 Hours  > Click on the most recent data
-      4. A separate window should pop up. Using that window, go to Results > Click Print Data Tab > Export > Export To > CSV file> Save on the most recent folder of the day and label Mass_(Date) [No parenthesis].
-      5. Open RStudio and make sure that you are in the Titrator project (top right-hand side of the display)
-      6. Open the R script named Total_Alkalinity_wParsing.R, scroll down to find "setwd", “path” , “massfile”, “TitratorFiles” and “Date”
-      7. Modify “date” to the current day.
-      8. Modify “path” to the name of the folder of the day from step [2.ii] (Case Sensitive) and change "setwd" to "C:/Users/PPP Lab/Documents/Titrator/Data/*folder of the day*"
-      9. “TitratorFiles”  is the name of the .csv file with all the titrations that was automatically exported.
-      10. Modify “massfile” to the name of the current file from step [8.iv] (Case Sensitive)
-      11. Click on Source to completely transfer the data
-      12. A csv file will be automatically exported to the folder of the day with the calculated TA data. If this is a CRM run, here is where you will be the TA value of the CRM to enter it into the CRMAccuracyData file (see 5b).
-      13. After the CRM run, edit the file names for Mass, the raw Titrator File, and the new TA file to include "_CRM_".
-      14. After each titration, the raw Titrator File and Mass File will overwrite the previous files in the folder if a new name is not given to the previous files.
-      15. After each Source of the TotalAlkCalc_wParsing.R script, the new TA file will overwrite the previous file in the folder if a new name is not given to the previous file.
-      16. For multiple titrations after the CRM run, use a label for these three files to distinguish between the multiple titrations.
+     1. After the titration is complete, you must gather the data and export it to the current folder. Make a file called "Mass_date" Ex: Mass_20210221 in your *folder of the day* that includes "Sample ID1", "Weight", and "Salinity". fill in your corresponding label IDs, weights, and salinities into this file. **Keep all labeling consistent from titration to analysis**
+      2. Open RStudio.
+      3. Open the R script named Total_Alkalinity_wParsing.R, scroll down to find "setwd", “path” , “massfile”, “TitratorFiles” and “Date”
+      4. Modify “date” to the current day.
+      5. Modify “path” to the name of the folder of the day from step [2.ii] (Case Sensitive) and change "setwd" to "C:/Users/PPP Lab/Documents/Titrator/Data/*folder of the day*"
+      6. “TitratorFiles”  is the name of the .csv file with all the titrations that was automatically exported.
+      7. Modify “massfile” to the name of the current file from step [8.i] (Case Sensitive)
+      8. Click on Source to completely transfer the data
+      9. A csv file will be automatically exported to the folder of the day with the calculated TA data. If this is a CRM run, here is where you will be the TA value of the CRM to enter it into the CRMAccuracyData file (see 5b).
+      10. After the CRM run, edit the file names for Mass, the raw Titrator File, and the new TA file to include "_CRM_".
+      11. After each titration, the raw Titrator File and Mass File will overwrite the previous files in the folder if a new name is not given to the previous files.
+      12. After each Source of the TotalAlkCalc_wParsing.R script, the new TA file will overwrite the previous file in the folder if a new name is not given to the previous file.
+      13. For multiple titrations after the CRM run, use a label for these three files to distinguish between the multiple titrations.
 
 9. <a name="Pushing Titrator Data to GitHub"></a> **Github**
 

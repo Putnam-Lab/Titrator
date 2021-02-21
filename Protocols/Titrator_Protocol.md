@@ -135,7 +135,7 @@ Contents
 
 5. <a name="CRM_Titration"></a> **CRM_Titration**
 
-    1. Run step 4, but only use a CRM (or a junk and CRM sample if needed).
+    1. Run step 4, but only use a CRM (or a junk and CRM sample if needed). Find the TA and salinity information for your specific CRM batch number [here](https://www.ncei.noaa.gov/access/ocean-carbon-data-system/oceans/Dickson_CRM/batches.html)
     2. Skip to [**Data_Analysis**](#Data_Analysis) to calculate total alkalinity of the CRM. Then check the accuracy of the data.
     3. **In every CRM Titration, it is necessary to report the accuracy in the “CRMAccuracyData” file to test the accuracy.  If must never be more than 1% off. Accuracy must be tested before running any samples for the day.**
 
@@ -149,7 +149,7 @@ Contents
 
     1. While the samples are running on the titrator, you will measure salinity of each sample from the original sample vial.
     2. Calibrate the conductivity meter (Orion Star) using a 2 point calibration.
-    3. Measure the salinity of every sample and write down the value in a csv file.
+    3. Measure the salinity of every sample and write down the value in the csv file you will make below. For CRMs, the salinity corresponds to its batch number, for junks just use salinity of 35.
 
 
 8. <a name="Data_Analysis"></a> **Data_Analysis**

@@ -14,6 +14,7 @@ Contents
 - [**SAMPLE_Titration**](#SAMPLE_Titration)
 - [**Measure_Salinity**](#Measure_Salinity)
 - [**Data_Analysis**](#Data_Analysis)
+- [**Using GitHub on Windows Computer**](#GitHub)
 - [**Clean_Up**](#Clean_Up)
 
 <a name="Materials"></a> **Materials**
@@ -169,6 +170,26 @@ Contents
       15. After each Source of the TotalAlkCalc_wParsing.R script, the new TA file will overwrite the previous file in the folder if a new name is not given to the previous file.
       16. For multiple titrations after the CRM run, use a label for these three files to distinguish between the multiple titrations.
 
+9. <a name="Pushing Titrator Data to GitHub"></a> **Github**
+
+    1. After completing titratoion for the day, you will need to push all your updated data to the GitHub Titrator repository.
+    2. If you have never used GitHub or command line before, contact a lab manager or someone that has used it prior for instuctions.
+    2. On windows, type in and open "Git Bash" in the search bar (this app allows you to push and pull data from your windows computer to GitHub). 
+    3. This will open a seperate window. Type in: "cd Documents/" into the window. This will take you into the documents folder on the computer. Type in "ls" to see the contents of this folder. 
+    4. In the Documents folder you will see the Titrator folder.
+    5. To go into the Titrator folder, Type in: "cd Titrator/" into the window. This will take you into the Titrator folder on the computer. Type in "ls" to see the contents of this folder. 
+    6. You will see a "Data", "Protocols", and "Scripts" folder within the Titrator folder. You can use the "cd" and "ls" commands to get into each folder and see the contents.
+    7. If you have made any changes to any of these folders during your titrator runs for the day, make sure to push these changes to GitHub before you leave for the day. 
+    8. Before making any changes to the repository, **always make sure to use the command "git pull"**. 
+            - This comman incorporates changes from a remote repository into the current branch. So if ny changes were made to the GitHub repository by another user, this ensures you have the most up to date repository.
+    9. For any folders that you changed, type in: "git add folder_name" Ex: git add Data/ into the Git Bash app.
+            - The git add command updates the index using the current content found in the working tree, to prepare the content staged for the next commit.
+    10. Next, you have to commit whatever new information you added. Type in: "git commit -a -m "explanation here"" Ex: git commit -a -m "added titrations for initial E5 testing on 20210221 dmb"
+            - The git commit command creates a new commit containing the current contents of the index and the given log message describing the changes. 
+    11. Finally, you have to push all of the added data to the GitHub repository. Type in: "git push" into the Git Bash app.
+            - This command updates remote refs using local refs, while sending objects necessary to complete the given refs.
+    12. After following these commands, make sure to login to your GitHub account on an internet browser and check that the changes have been made on the [Putnam Lab Titrator Repository](https://github.com/Putnam-Lab/Titrator). 
+                
 
 10. <a name="Clean_Up"></a> **Clean_Up**
 

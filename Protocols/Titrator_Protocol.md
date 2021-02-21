@@ -56,12 +56,12 @@ Contents
         1. To turn on the Titrator, press the Power Button in the front of the machine (far upper-right corner).
         1. To turn on the Autosampler, push on the Power switch in the back of the machine (black switch).
         1. Connect the Titrator cord to the Laptop (white cord).
-    2. Using the laptop, create a new folder within the general data folder [C: This PC > Users > PPP Lab > Titratior > Data]. Name: date in yyyymmdd format. Example: 20180602 *(That is your folder of the day.)*
-    3. The folder must be named something appropriate for the samples being processed (for example, Bermuda31 would be all the Bermuda data for 31 degrees) within the Data Folder. *(That is your folder of the day.)*
+    2. Using the laptop, create a new folder within the general data folder [C: This PC > Users > PPP Lab > Documents > Titratior > Data]. Name: date_description in yyyymmdd format. Example: 20180602_MooreaSamples28 *(That is your folder of the day.)*
+    3. The folder must be named something appropriate for the samples being processed (for example, MooreaSamples28 would be all the Moorea data for 28 degrees) within the Data Folder. *(That is your folder of the day.)*
     4. Open Excel, LabX and RStudio (R)
     5. Minimize Excel and R to reduce clutter.
     6. Using LabX, modify the Server Export Directory so that the files export to your *folder of the day*. To do so, go to System (Bottom Left) > At the System’s tab, click “Import and Export” then “Export Templates” > Select “Export Template” and search for the "Edit Export Template" icon in the upper left. Click the Settings tab then edit the Export File Name and Export Directory.
-    7. On the “Server Export Directory,” that is where your data is going. You can modify it by clicking on “Edit Export Template” and navigate to the *folder of the day*.
+    7. On the “Server Export Directory,” that is where your data is going. You can modify it by clicking on “Edit Export Template” and navigate to the *folder of the day*. Select "Save and Close" in the upper left hand corner and exit this window. You will now see your export path in the export templates section of LabX.
     8. There should already be an empty 80ml cup in position 00.
     9. If not, raise the Rondolino by pressing the left blue button "Rotate 180 degrees" (with no numbered tick marks). Press the same button to return the Rondolino to position 00.
     10. PURGING (RINSING): Using the Titrator tablet, tap “Manual”, "Burette", "Rinse". Set Titrant: HCl, Concentration: 0.1 mol/L, Drive: 1, Cycles: 3, Discharge volume: 100%, Fill rate: 100%. See notes below before pressing "Start".
@@ -71,16 +71,17 @@ Contents
     - *Note: Rinse is used to purge any air bubbles that may occur in the acid line. If there are more air bubbles, flick both tubes until they disappear*. ***DO NOT start titrations if there are still bubbles, this will affect the amount of acid the titrator gives the sample***.
 
     13. After Purging/Rinsing, click "OK" to bring the titrator screen back to home.
-    14. Recycle (pour back) the acid into the glass bottle that is connected to the titrator by removing the small white plug and pour carefully into the bottle.
+    14. If you still see bubbles in the lines, redo the purging step!
+    15. Recycle (pour back) the acid into the glass bottle that is connected to the titrator by removing the small white plug and pour carefully into the bottle.
         1. If a spill occurs, you must use the chemical wipes with DI water to soak up the acid.
-    15. Using DI water, clean the acid cup. Leave upside down on KimWipe to dry.
-    16. Located at the right side, at the back of the Titrator, there will be a pH Sensor. Place the sensor in the position marked with a black arrow, next to the propeller.
-    17. Open the grey cap on the pH sensor and leave open throughout use. pH will not be measured otherwise.
-        1. Before calibrations can be made, look at the top of the Sensor for KCl, if a sufficient amount of KCl can be seen, skip to [j]. If not, follow the step below.
+    16. Using DI water, clean the acid cup. Leave upside down on KimWipe to dry.
+    17. Located at the right side, at the back of the Titrator, there will be a pH Sensor. Place the sensor in the position marked with a black arrow, next to the propeller.
+    18. Open the grey cap on the pH sensor and leave open throughout use. pH will not be measured otherwise.
+        1. Before calibrations can be made, look at the top of the Sensor for KCl, make sure the KCl is filled to fully cover the metal inside by the grey cap, skip to [18]. If not, follow the step below.
         1. If KCl reservoir is low, open the cap on the sensor’s reservoir and add a few drops of KCl on the opening.
-    18. Make sure that the cap is **open at all times**, so it can measure the pH.
-    19. Make sure the probe rinse reservoir is filled with DI water (a plastic tube on the right side of the InMotion Pro).
-    20. Once the pH probe is placed in its slot next to the propeller, fill a DI Only cup 2/3 full with DI water and place this cup in poistion 00. On the Titrator screen, "Park" the autosampler. The pH probe should always be submerged in a liquid (DI or its storage solution).
+    19. Make sure that the cap is **open at all times**, so it can measure the pH.
+    20. Make sure the probe rinse reservoir is filled with DI water (a plastic tube on the right side of the InMotion Pro).
+    21. Once the pH probe is placed in its slot next to the propeller, fill a DI Only cup 2/3 full with DI water and place this cup in poistion 00. On the Titrator screen, "Park" the autosampler. The pH probe should always be submerged in a liquid (DI or its storage solution).
 
 3. <a name="pH_Calibration"></a> **pH_Calibration**
 
@@ -89,32 +90,32 @@ Contents
     3. If a new buffer bottle is opened, write the date opened, your initials, and your lab on the bottle (ex: Opened 20180602 ES (Putnam)).
     4. Place the three cups in the Autosampler: Position 01 - pH 4.0, Position 02 - pH 7.0, Position 03 - pH 10.0.
     5. Place a 80 mL cup filled halfway with DI water into Position 00.
-    6. Using LabX, click "Analysis" on the bottom left-hand side then look for the Released Methods and click on “Calibration”
+    6. Using LabX, click "Analysis" on the bottom left-hand side then look for the Released Methods and click on “Calibration”, in the calibration method editor, make sure you select which export template you would like the output plot to go to. This is found in the export templates section on the right hand side of this window. Select "Save and Close" after making your selection. 
     7. Click Start > Titrator > Start to start the Calibration.
     8. You can either Right click on the Calibration group or look for the tab named “Recurrence” (It’s on top of the Released Methods) and click Start.
-    9. Viewing from the Titrator window, watch the graph for any anomalies.
+    9. Viewing from the Titrator window (select "Show Workbench" if it does not pop up after ~30 seconds), watch the graph for any anomalies.
         1. Anomalies such as the graph jumping constantly.
         1. Unless the zoom scale of the graph in the y-axis is at 0.1, small zig-zags are acceptable, but any change >0.1 units over time means that the calibration should be re-done with new buffers.
     10. Once finished, the graph should be a Flat Line for individual samples or a downward graph if all three points are displayed.
         1. If the results are not as described in step [ii.], replace buffers and redo [a. - d.].
-    11. Using Excel, open the “pHCalibration.csv” file
-        1. (Destination: labX_data > Data)
-    12. Record the Date, Zero Point, Slope, pH 4, pH 7, pH 10, and Notes
+    11. Using Excel, open the “pHCalibration.csv” file, [C: This PC > Users > PPP Lab > Documents > Titratior > Data].
+    12. Record the Date, Zero Point, Slope, pH 4, pH 7, pH 10, and Notes into the "pH_calibration.csv" file
         1. The Notes are used to determine the age of the buffer.
-        1. To gather Zero Point and Slope, go to LabX > Click Data > look for “Result Sets” on the Data Tab bar (Top Left) > Click “Last 24 hours” > Doiuble click pH CAL” > Record the data for slope and zero point onto the Excel spreadsheet.
+        1. To gather Zero Point and Slope, go to LabX > Click Data > look for “Result Sets” on the Data Tab bar (Top Left) > Click “Last 24 hours” > Doiuble click on the "Calibration data set” > select the "Raw Data" tab >  scroll down to the "after sample scopes" > Record the data for slope and zero point onto the Excel spreadsheet.
         1. As an alternative: Go to the Titrator tablet and if the tablet displays that the Calibration is done, press OK to view the Zero Point and Slope.
-        1. To gather data for each pH, click the Raw Data tab from the same pH CAL Results Set.
+        1. To gather data for each pH, click the Raw Data tab from the same Calibration Results Set.
             1. Look for the “E” (mV) value for each pH, and record the "E" values on the spreadsheet.
             1. Note: The results should be displayed in order from pH of 4, 7, then 10 as you scroll down in the raw data results page.
         1. Once the calibrations are complete, remove the cups from the Autosampler and dispose them into the into a plastic reagent bottle, respective of their pH.
             1. If the pH buffers need replacing, dispose of the buffers by pouring 4 and 10 down the sink simultaneously while running the faucet. Then pour the 7 buffer. Rince the pH buffer cups with water and hang them on the rack to dry.
-        1. Save document and set the destination to the “Data” Folder.
+        1. Save CSV document and set the destination to the “Data” Folder.
 
 
 4. <a name="Running_a_titration"></a> **Running_a_titration**
 
     1. You should start each day by running a Certified Reference Material (CRM) from the Dickson Lab. These are the standards. The procedure for running any titration, whether a CRM or unknowns are as follows. It is also advisable to start with a “junk” sample (filtered seawater that you don’t care about) at the beginning of each run to ensure there are no air bubbles in the acid line.
-    2. On the LabX window, similarly to calibration, click on Putnam Lab > Start > Titration
+    2. On the LabX window, similarly to calibration, click on Putnam Lab Titrations  > Start > Titration
+        - In the Putnam Lab Titrations method editor, make sure you select which export template you would like the output data to go to. This is found in the export templates section on the right hand side of this window. Select "Save and Close" after making your selection. 
     3. A window should pop up. Depending on the number of the sample measured, click on “Number of Samples” then apply the specific number of samples used in the titration, then press enter on the keyboard.
     4. On the left, look for the “ID 1” column and label the sample. Put in all your sample IDs into this column.
             1. Label ID Ex: "20210218_JUNK1"

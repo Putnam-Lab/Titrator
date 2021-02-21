@@ -105,7 +105,7 @@ colnames(TA)<-c("SampleID",'TA','Mass','Salinity') # changed Sample.ID1 to Sampl
 # read in the mega concatenated titration results file
 filename<-file.path(path,titrationfile)
 
-AllData<-read.csv(filename, sep=",", na.string="NA", as.is=T, skip=4)[ ,1:5]
+AllData<-read.csv(filename, sep=",", na.string="NA", as.is=T, skip=3)[ ,1:5]
 
 #Identifies rows starting with scope in column 1 of the titration file
 sample_name_positions <- c(1,grep("^Scope", AllData[,1]), nrow(AllData))

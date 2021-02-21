@@ -13,6 +13,7 @@
 # modified 20210126 Sam Gurr - set diff directories and such for PPP Lab titrator (URI)
 # new acid bottle 20190626 by Sam Gurr - changed lines 
 #line 68 changed SampleID to Sample.ID - Sam Gurr 20180713
+#modified 20210221 Danielle Becker - set different mass file and Titratorfile to match code
 
 #------------------------------------------------------------
 rm(list=ls())
@@ -97,7 +98,7 @@ TA <- data.frame(matrix(nrow = nrows, ncol = 4))
 
 rownames(TA)<-Mass$Sample.ID1[1:nrows]
 
-colnames(TA)<-c("SampleID",'TA','Mass','Salinity') # changed SampleID to Sample.ID
+colnames(TA)<-c("SampleID",'TA','Mass','Salinity') # changed Sample.ID1 to SampleID in the TA data frame only
 
 
 #run a for loop to bring in the titration files one at a time and calculate TA

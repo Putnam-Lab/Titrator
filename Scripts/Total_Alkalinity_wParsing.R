@@ -19,7 +19,7 @@ rm(list=ls())
 
 #set working directory---------------------------------------------------------------------------------------------
 
-setwd("C:/Users/PPP Lab/Documents/Water_Chemistry")
+setwd("C:/Users/PPP Lab/Documents/Titrator")
 main<-getwd()
 
 #load libraries----------------------------------------------
@@ -27,8 +27,8 @@ library(seacarb) #used to calculate TA
 library(tidyverse)
 
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
-path<-"Data/TA/20210218" #the location of all your titration files
-massfile<-"20210218mass_CRM.csv" # name of your file with masses
+path<-"Data/20210221_E5_CRM_Test" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_20210221.csv" # name of your file with masses
 titrationfile<-'20210218_CRM.csv'# name of the last titration file run
 
 

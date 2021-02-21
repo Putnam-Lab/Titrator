@@ -101,7 +101,7 @@ Contents
     11. Using Excel, open the “pHCalibration.csv” file, [C: This PC > Users > PPP Lab > Documents > Titratior > Data].
     12. Record the Date, Zero Point, Slope, pH 4, pH 7, pH 10, and Notes into the "pH_calibration.csv" file
         1. The Notes are used to determine the age of the buffer.
-        1. To gather Zero Point and Slope, go to LabX > Click Data > look for “Result Sets” on the Data Tab bar (Top Left) > Click “Last 24 hours” > Doiuble click on the "Calibration data set” > select the "Raw Data" tab >  scroll down to the "after sample scopes" > Record the data for slope and zero point onto the Excel spreadsheet.
+        1. To gather Zero Point and Slope, go to LabX > Click Data > look for “Result Sets” on the Data Tab bar (Top Left) > Click “Last 24 hours” > Double click on the "Calibration data set” > select the "Raw Data" tab >  scroll down to the "after sample scopes" > Record the data for slope and zero point onto the Excel spreadsheet.
         1. As an alternative: Go to the Titrator tablet and if the tablet displays that the Calibration is done, press OK to view the Zero Point and Slope.
         1. To gather data for each pH, click the Raw Data tab from the same Calibration Results Set.
             1. Look for the “E” (mV) value for each pH, and record the "E" values on the spreadsheet.

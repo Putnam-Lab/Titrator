@@ -157,13 +157,13 @@ Contents
       1. After the titration is complete, you must gather the data and export it to the current folder. The titrations will automatically export, but the mass of the sample will not.
       2. To gather the mass data, you must export it to the current folder.
       3. Go Data > Result Sets > Last 24 Hours  > Click on the most recent data
-      4. A separate window should pop up. Using that window, go to Results > Click Print Data Tab > Export > Export To > CSV file> Save on the most recent folder and label Mass_(Date) [No parenthesis].
+      4. A separate window should pop up. Using that window, go to Results > Click Print Data Tab > Export > Export To > CSV file> Save on the most recent folder of the day and label Mass_(Date) [No parenthesis].
       5. Open RStudio and make sure that you are in the Titrator project (top right-hand side of the display)
-      6. Open the R script named TotalAlkCalc_wParsing.R, scroll down to find “path” , “massfile”, “TitratorFiles” and “Date”
+      6. Open the R script named Total_Alkalinity_wParsing.R, scroll down to find "setwd", “path” , “massfile”, “TitratorFiles” and “Date”
       7. Modify “date” to the current day.
-      8. Modify “path” to the name of the folder of the day from step [2.b] (Case Sensitive)
+      8. Modify “path” to the name of the folder of the day from step [2.ii] (Case Sensitive) and change "setwd" to "C:/Users/PPP Lab/Documents/Titrator/Data/*folder of the day*"
       9. “TitratorFiles”  is the name of the .csv file with all the titrations that was automatically exported.
-      10. Modify “massfile” to the name of the current file from step [5.a.ii.2] (Case Sensitive)
+      10. Modify “massfile” to the name of the current file from step [8.iv] (Case Sensitive)
       11. Click on Source to completely transfer the data
       12. A csv file will be automatically exported to the folder of the day with the calculated TA data. If this is a CRM run, here is where you will be the TA value of the CRM to enter it into the CRMAccuracyData file (see 5b).
       13. After the CRM run, edit the file names for Mass, the raw Titrator File, and the new TA file to include "_CRM_".

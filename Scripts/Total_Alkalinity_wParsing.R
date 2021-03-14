@@ -28,7 +28,7 @@ library(seacarb) #used to calculate TA
 library(tidyverse)
 
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
-path<-"Data/20210314_E5_CRM_pH_probe_test/" #the location of all your titration files, your folder of the day!
+path<-"Data/20210314_E5_CRM_pH_probe_test2/" #the location of all your titration files, your folder of the day!
 massfile<-"Mass_20210314.csv" # name of your file with masses
 titrationfile<-'Titrations-3_14_2021-PutnamLab.csv'# name of the last titration file run
 

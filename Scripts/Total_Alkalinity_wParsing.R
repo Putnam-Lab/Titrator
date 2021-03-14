@@ -28,13 +28,13 @@ library(seacarb) #used to calculate TA
 library(tidyverse)
 
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
-path<-"Data/20210221_E5_CRM_Test" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_20210221.csv" # name of your file with masses
-titrationfile<-'Titrations-2_21_2021-Putnam Lab Titrations.csv'# name of the last titration file run
+path<-"Data/20210314_E5_CRM_pH_probe_test/" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_20210314.csv" # name of your file with masses
+titrationfile<-'Titrations-3_14_2021-PutnamLab.csv'# name of the last titration file run
 
 
 # Date that the data were run
-date<-'20210221'
+date<-'20210314'
 
 #DO NOT CHANGE ANYTHING BELOW THIS LINE UNLESS A NEW BOTTLE OF ACID IS USED
 
@@ -105,7 +105,7 @@ colnames(TA)<-c("SampleID",'TA','Mass','Salinity') # changed Sample.ID1 to Sampl
 # read in the mega concatenated titration results file
 filename<-file.path(path,titrationfile)
 
-AllData<-read.csv(filename, sep=",", na.string="NA", as.is=T, skip=3)[ ,1:5]
+AllData<-read.csv(filename, sep=",", na.string="NA", as.is=T, skip=4)[ ,1:5]
 
 #Identifies rows starting with scope in column 1 of the titration file
 sample_name_positions <- c(1,grep("^Scope", AllData[,1]), nrow(AllData))
@@ -166,15 +166,15 @@ for(i in 1:nrows) {
   #Batch A16 changed on 20190731 by SJG, SIlbiger used same batch
   #d<-(-0.00000410*mean(Data$Temperature[mV], na.rm=T)^2-0.0001067*mean(Data$Temperature[mV], na.rm=T)+1.02882) #03/8/18 Silbiger example
   
-
+  
   d<-(-0.00000410*mean(Data$Temperature[mV], na.rm=T)^2-0.0001065*mean(Data$Temperature[mV], na.rm=T)+1.02884) #20190731 Batch A16
   
-
+  
   
   #concentration of your titrant: CHANGE EVERYTIME ACID IS CHANGED 
   
   c<-0.100010 ##Batch A16 first used by SJG on 20190731
-
+  
   
   
   

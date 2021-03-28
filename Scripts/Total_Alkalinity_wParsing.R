@@ -14,6 +14,7 @@
 # new acid bottle 20190626 by Sam Gurr - changed lines 
 #line 68 changed SampleID to Sample.ID - Sam Gurr 20180713
 #modified 20210221 Danielle Becker - set different mass file and Titratorfile to match code
+#modified 20210318 Danielle Becker - opened a new acid titrant, same batch #A16
 
 #------------------------------------------------------------
 rm(list=ls())
@@ -28,13 +29,13 @@ library(seacarb) #used to calculate TA
 library(tidyverse)
 
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
-path<-"Data/20210314_E5_CRM_pH_probe_test2/" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_20210314.csv" # name of your file with masses
-titrationfile<-'Titrations-3_14_2021-PutnamLab.csv'# name of the last titration file run
+path<-"Data/20210328_Bailout_BlueTankSamples/" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_20210328.csv" # name of your file with masses
+titrationfile<-'Titrations-3_28_2021-PutnamLab.csv'# name of the last titration file run
 
 
 # Date that the data were run
-date<-'20210314'
+date<-'20210328'
 
 #DO NOT CHANGE ANYTHING BELOW THIS LINE UNLESS A NEW BOTTLE OF ACID IS USED
 

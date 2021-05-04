@@ -9,3 +9,4 @@ Date,ZeroPoint,Slope,pH4,pH7,pH10,temp,status,notes,initials
 20210404,7.067,-55.92,165.5,14.7,-170,25,BAD,20210224_faulty_probe,DMB
 20210418,6.95,-58.15,170.9,-2.7,-178,25,GOOD,20210418_newest_probe,DMB
 20210428,6.894,-58.4,168.6,-6.6,-181.8,25,GOOD,20210428_same_buffers,DMB
+20210504,6.891,-58.32,168.2,-6.8,-181.7,25,GOOD,20210504_same_buffers,DMB

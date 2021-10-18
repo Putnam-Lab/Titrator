@@ -1,3 +1,5 @@
-Sample ID,Weight,Salinity
-JUNK1,,
-CRM1,,
+Sample ID1,Weight,Salinity
+JUNK1,59.798,35
+BLT1,59.765,33.44
+BLT2,59.692,33.44
+BLT3,59.987,33.44

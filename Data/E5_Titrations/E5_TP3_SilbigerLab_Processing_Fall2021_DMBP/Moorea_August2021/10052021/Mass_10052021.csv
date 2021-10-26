@@ -1,0 +1,27 @@
+Results Editor,,,,,,,,,,,,,,,,,,,,
+Result Overview,,,,,,,,,,,,,,,,,,,,
+Sample Index In Scope,Sample ID1,Sample start time,Overall State,Excluded,Correction factor,Unit of Correction factor,Temperature [°C],Unit of Temperature [°C],Comment,Content (R3),Unit of Content (R3),Data markings of Content (R3),Content (R1),Unit of Content (R1),Data markings of Content (R1),Weight [g],Unit of Weight [g],,Density [g/m L],Unit of Density [g/m L]
+1,junk1,10/5/2021 12:19:23 PM,OK,Unchecked,0,,25.0,°C,,2.398,mL,,60.048,g,,60.0482,g,,1.0,g/mL
+2,junk2,10/5/2021 12:30:06 PM,OK,Unchecked,0,,25.0,°C,,2.406,mL,,60.031,g,,60.0307,g,,1.0,g/mL
+3,POC_366_2020200912_RUN_4,10/5/2021 12:40:41 PM,OK,Unchecked,0,,25.0,°C,,2.418,mL,,60.411,g,,60.4108,g,,1.0,g/mL
+4,INITIAL_1_20200913_RUN_5,10/5/2021 12:51:19 PM,OK,Unchecked,0,,25.0,°C,,2.420,mL,,60.047,g,,60.0473,g,,1.0,g/mL
+5,ACR_186_20200915_RUN_10,10/5/2021 1:01:55 PM,OK,Unchecked,0,,25.0,°C,,2.384,mL,,59.943,g,,59.9428,g,,1.0,g/mL
+6,ACR_140_20200916_RUN_11,10/5/2021 1:12:26 PM,OK,Unchecked,0,,25.0,°C,,2.418,mL,,59.859,g,,59.8587,g,,1.0,g/mL
+7,POR_71_20200916_RUN_11,10/5/2021 1:23:02 PM,OK,Unchecked,0,,25.0,°C,,2.386,mL,,59.954,g,,59.9535,g,,1.0,g/mL
+8,POR_251_20200913_RUN_6,10/5/2021 1:33:34 PM,OK,Unchecked,0,,25.0,°C,,2.324,mL,,59.578,g,,59.5779,g,,1.0,g/mL
+9,POC_48_20200915_RUN_9,10/5/2021 1:43:58 PM,OK,Unchecked,0,,25.0,°C,,2.392,mL,,59.658,g,,59.6577,g,,1.0,g/mL
+10,POC_57_20200914_RUN_8,10/5/2021 1:54:32 PM,OK,Unchecked,0,,25.0,°C,,2.430,mL,,60.358,g,,60.3579,g,,1.0,g/mL
+11,POR_73_20200916_RUN_11,10/5/2021 2:05:09 PM,OK,Unchecked,0,,25.0,°C,,2.393,mL,,60.194,g,,60.1943,g,,1.0,g/mL
+12,POR_221_20200913_RUN_6,10/5/2021 2:15:39 PM,OK,Unchecked,0,,25.0,°C,,2.392,mL,,60.239,g,,60.2386,g,,1.0,g/mL
+13,INITIAL_1_20200916_RUN_11,10/5/2021 2:26:11 PM,OK,Unchecked,0,,25.0,°C,,2.420,mL,,59.814,g,,59.8138,g,,1.0,g/mL
+14,ACR_244_20200913_RUN_5,10/5/2021 2:36:48 PM,OK,Unchecked,0,,25.0,°C,,2.404,mL,,60.140,g,,60.1405,g,,1.0,g/mL
+15,POC_259_20200914_RUN_7,10/5/2021 2:47:20 PM,OK,Unchecked,0,,25.0,°C,,2.412,mL,,59.752,g,,59.7525,g,,1.0,g/mL
+16,POR_82_20200916_RUN_11,10/5/2021 2:57:56 PM,OK,Unchecked,0,,25.0,°C,,2.380,mL,,60.341,g,,60.3408,g,,1.0,g/mL
+17,BLANK_5_20200913_RUN_5,10/5/2021 3:08:26 PM,OK,Unchecked,0,,25.0,°C,,2.450,mL,,60.249,g,,60.2492,g,,1.0,g/mL
+18,ACR_229_20200912_RUN_4,10/5/2021 3:19:06 PM,OK,Unchecked,0,,25.0,°C,,2.418,mL,,60.216,g,,60.2157,g,,1.0,g/mL
+19,ACR_241_20200913_RUN_5,10/5/2021 3:29:42 PM,OK,Unchecked,0,,25.0,°C,,2.413,mL,,60.264,g,,60.2639,g,,1.0,g/mL
+20,INITIAL_2_20200915_RUN_9,10/5/2021 3:40:17 PM,OK,Unchecked,0,,25.0,°C,,2.450,mL,,60.313,g,,60.3133,g,,1.0,g/mL
+21,POC_205_20200913_RUN_6,10/5/2021 3:50:58 PM,OK,Unchecked,0,,25.0,°C,,2.410,mL,,59.752,g,,59.7517,g,,1.0,g/mL
+22,ACR_173_20200916_RUN_11,10/5/2021 4:01:35 PM,OK,Unchecked,0,,25.0,°C,,2.373,mL,,59.840,g,,59.8397,g,,1.0,g/mL
+23,CRM,10/5/2021 4:12:06 PM,OK,Unchecked,0,,25.0,°C,,2.376,mL,,60.043,g,,60.0427,g,,1.0,g/mL
+10/5/2021 9:13:05 PMSystemInternal,,,,,,,,,,,,,,,,,,1/1,,

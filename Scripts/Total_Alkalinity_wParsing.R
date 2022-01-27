@@ -15,6 +15,7 @@
 #line 68 changed SampleID to Sample.ID - Sam Gurr 20180713
 #modified 20210221 Danielle Becker - set different mass file and Titratorfile to match code
 #modified 20210318 Danielle Becker - opened a new acid titrant, same batch #A16
+#new acid bottle 20220127 by Danielle Becker - new batch number A22, updated script calculation
 
 #------------------------------------------------------------
 rm(list=ls())
@@ -159,22 +160,21 @@ for(i in 1:nrows) {
   
   #CHANGE ONLY WHEN NEW BOTTLE OF ACID IS USED----------------------------------
   
-  #Bottle #A16 20190731 SJG , 
-  
   #density of your titrant: change every time acid is changed
   
-  
   #Batch A16 changed on 20190731 by SJG, SIlbiger used same batch
-  #d<-(-0.00000410*mean(Data$Temperature[mV], na.rm=T)^2-0.0001067*mean(Data$Temperature[mV], na.rm=T)+1.02882) #03/8/18 Silbiger example
+  #d<-(-0.00000410*mean(Data$Temperature[mV], na.rm=T)^2-0.0001065*mean(Data$Temperature[mV], na.rm=T)+1.02884) #20190731 Batch A16
   
+  #Danielle Becker updated script and changed acid to new batch #A22 on 20220127
   
-  d<-(-0.00000410*mean(Data$Temperature[mV], na.rm=T)^2-0.0001065*mean(Data$Temperature[mV], na.rm=T)+1.02884) #20190731 Batch A16
-  
+  d<-(-0.00000400*mean(Data$Temperature[mV], na.rm=T)^2-0.0001116*mean(Data$Temperature[mV], na.rm=T)+1.02881) #20220127 Batch A22 DMBP
   
   
   #concentration of your titrant: CHANGE EVERYTIME ACID IS CHANGED 
   
-  c<-0.100010 ##Batch A16 first used by SJG on 20190731
+  #c<-0.100010 ##Batch A16 first used by SJG on 20190731
+  
+  c<-0.100347 ##Batch A22 first used by DMBP on 20220127
   
   
   

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<lance>
+	<db>
+		<date>14.03.2022 10:25.46</date>
+		<version>0.132</version>
+		<user>SystemInternal</user>
+		<serialnumber>17</serialnumber>
+		<instrument>T50T90</instrument>
+		<resourcelist>
+			<record key="100" prefix="57346" type="1" mtype="0" mtitle="Calibration DG115-SC">
+				<methodfunction descr="eMethodFunctionTitle" id="2048">
+					<param id="2051" type="I" descr="eMfParam_Title_Type">0</param>
+					<param id="2059" type="I" descr="eMfParam_Title_Compatible">0</param>
+					<param id="2050" type="S" descr="eMfParam_Title_ID">100</param>
+					<param id="2049" type="S" descr="eMfParam_Title_Title">Calibration DG115-SC</param>
+					<param id="2052" type="S" descr="eMfParam_Title_Author">SystemInternal</param>
+					<param id="2053" type="D" descr="eMfParam_Title_DateTime">2219935569609477</param>
+					<param id="2054" type="D" descr="eMfParam_Title_Chanage_Date">2223225581352498</param>
+					<param id="2055" type="S" descr="eMfParam_Title_Chanage_User">SystemInternal</param>
+					<param id="2060" type="I" descr="eMfParam_Title_Protection">1</param>
+					<param id="2056" type="I" descr="eMfParam_Title_SOP">0</param>
+					<param id="2058" type="S" descr="eMfParam_Title_SOPLink" />
+					<param id="2057" type="S" descr="eMfParam_Title_SOPText" />
+				</methodfunction>
+				<methodfunction descr="eMethodFunctionSampleCalibration" id="65536">
+					<param id="65537" type="I" descr="eMfParam_SampleCalibration_SensorType">3</param>
+					<param id="65538" type="S" descr="eMfParam_SampleCalibration_SensorName">DG115-SC</param>
+					<param id="65539" type="I" descr="eMfParam_SampleCalibration_Unit">1</param>
+					<param id="65554" type="I" descr="eMfParam_SampleCalibration_IonCharge">2</param>
+					<param id="65555" type="I" descr="eMfParam_SampleCalibration_Action">0</param>
+					<param id="65540" type="I" descr="eMfParam_SampleCalibration_AutoBufferRecognition">0</param>
+					<param id="65541" type="S" descr="eMfParam_SampleCalibration_StandardList">METTLER TOLEDO USA (Ref. 25°C)</param>
+					<param id="65551" type="I" descr="eMfParam_SampleCalibration_CalibrationType">0</param>
+					<param id="65553" type="I" descr="eMfParam_SampleCalibration_NumberOfStandards">3</param>
+					<param id="65542" type="S" descr="eMfParam_SampleCalibration_Standard1">4.01</param>
+					<param id="65543" type="S" descr="eMfParam_SampleCalibration_Standard2">7.00</param>
+					<param id="65544" type="S" descr="eMfParam_SampleCalibration_Standard3">10.01</param>
+					<param id="65545" type="S" descr="eMfParam_SampleCalibration_Standard4" />
+					<param id="65546" type="S" descr="eMfParam_SampleCalibration_Standard5" />
+					<param id="65547" type="S" descr="eMfParam_SampleCalibration_Standard6" />
+					<param id="65548" type="S" descr="eMfParam_SampleCalibration_Standard7" />
+					<param id="65549" type="S" descr="eMfParam_SampleCalibration_Standard8" />
+					<param id="65550" type="S" descr="eMfParam_SampleCalibration_Standard9" />
+					<param id="65552" type="F" descr="eMfParam_SampleCalibration_Temperature">25.0</param>
+				</methodfunction>
+				<methodfunction descr="eMethodFunctionTitrationStand" id="75776">
+					<param id="75778" type="I" descr="eMfParam_TitrationStand_Type">10</param>
+					<param id="75777" type="I" descr="eMfParam_TitrationStand_StandName">19</param>
+					<param id="75779" type="I" descr="eMfParam_TitrationStand_LidHandling">0</param>
+					<param id="75780" type="I" descr="eMfParam_TitrationStand_DriftSource">0</param>
+					<param id="75781" type="F" descr="eMfParam_TitrationStand_MaxDrift">25.0</param>
+					<param id="75782" type="I" descr="eMfParam_TitrationStand_TOven">180</param>
+					<param id="75783" type="F" descr="eMfParam_TitrationStand_Drift">0.0</param>
+					<param id="75784" type="I" descr="eMfParam_TitrationStand_HeadPosition">0</param>
+				</methodfunction>
+				<methodfunction descr="eMethodFunctionStir" id="71680">
+					<param id="71682" type="I" descr="eMfParam_Stir_Speed">40</param>
+					<param id="71681" type="S" descr="eMfParam_Stir_Time">60</param>
+					<param id="71683" type="I" descr="eMfParam_Stir_Condition">0</param>
+					<param id="71684" type="S" descr="eMfParam_Stir_Condition_Formula" />
+				</methodfunction>
+				<methodfunction descr="eMethodFunctionMeasure" id="49152">
+					<param id="49219" type="I" descr="eMfParam_Measure_SF_Sensor_Type">3</param>
+					<param id="49217" type="S" descr="eMfParam_Measure_SF_Sensor_SensorName">DG115-SC</param>
+					<param id="49218" type="I" descr="eMfParam_Measure_SF_Sensor_Unit">0</param>
+					<param id="49220" type="I" descr="eMfParam_Measure_SF_Sensor_Indication">0</param>
+					<param id="49222" type="F" descr="eMfParam_Measure_SF_Sensor_IPol">15.0</param>
+					<param id="49221" type="F" descr="eMfParam_Measure_SF_Sensor_UPol">200.0</param>
+					<param id="49223" type="I" descr="eMfParam_Measure_SF_Sensor_IonCharge">2</param>
+					<param id="49633" type="I" descr="eMfParam_Measure_SF_TempMonitoring_TempMeasurement">1</param>
+					<param id="49634" type="S" descr="eMfParam_Measure_SF_TempMonitoring_TempSensorName">DT1000</param>
+					<param id="49635" type="I" descr="eMfParam_Measure_SF_TempMonitoring_TempUnit">18</param>
+					<param id="49185" type="I" descr="eMfParam_Measure_SF_Stir_StirSpeed">30</param>
+					<param id="49473" type="I" descr="eMfParam_Measure_SF_MR_WaitMode">0</param>
+					<param id="49474" type="F" descr="eMfParam_Measure_SF_MR_Drift_E">0.5</param>
+					<param id="49475" type="F" descr="eMfParam_Measure_SF_MR_Drift_T">0.5</param>
+					<param id="49479" type="F" descr="eMfParam_Measure_SF_MR_t_fix">10</param>
+					<param id="49476" type="F" descr="eMfParam_Measure_SF_MR_Delta_time">1</param>
+					<param id="49480" type="I" descr="eMfParam_Measure_SF_MR_SetValue_Mode">0</param>
+					<param id="49481" type="F" descr="eMfParam_Measure_SF_MR_SetValue">0.0</param>
+					<param id="49485" type="S" descr="eMfParam_Measure_SF_MR_LowerLimit">24.5</param>
+					<param id="49486" type="S" descr="eMfParam_Measure_SF_MR_UpperLimit">25.5</param>
+					<param id="49477" type="F" descr="eMfParam_Measure_SF_MR_t_min">3</param>
+					<param id="49478" type="F" descr="eMfParam_Measure_SF_MR_t_max">30</param>
+					<param id="49482" type="I" descr="eMfParam_Measure_SF_MR_MeanValue">1</param>
+					<param id="49483" type="I" descr="eMfParam_Measure_SF_MR_MeanCount">3</param>
+					<param id="49484" type="I" descr="eMfParam_Measure_SF_MR_MeanValue_dt">3</param>
+					<param id="50017" type="I" descr="eMfParam_Measure_SF_Condition_Condition">0</param>
+					<param id="50018" type="S" descr="eMfParam_Measure_SF_Condition_Formula" />
+				</methodfunction>
+				<methodfunction descr="eMethodFunctionEndOfSample" id="43008">
+					<param id="43009" type="I" descr="eMfParam_EndOfSample_OpenSeries">0</param>
+				</methodfunction>
+				<methodfunction descr="eMethodFunctionCalibration" id="28672">
+					<param id="28708" type="S" descr="eMfParam_Calibration_SensorName">DG115-SC</param>
+					<param id="28673" type="I" descr="eMfParam_Calibration_Limits">1</param>
+					<param id="28713" type="I" descr="eMfParam_Calibration_Interrupt">0</param>
+					<param id="28706" type="F" descr="eMfParam_Calibration_MinCellConstant">0.8</param>
+					<param id="28707" type="F" descr="eMfParam_Calibration_MaxCellConstant">1.2</param>
+					<param id="28674" type="F" descr="eMfParam_Calibration_MinSlope1">90</param>
+					<param id="28675" type="F" descr="eMfParam_Calibration_MaxSlope1">101</param>
+					<param id="28690" type="F" descr="eMfParam_Calibration_MinZeroPoint1">6.5</param>
+					<param id="28691" type="F" descr="eMfParam_Calibration_MaxZeroPoint1">7.5</param>
+					<param id="28676" type="F" descr="eMfParam_Calibration_MinSlope2">90</param>
+					<param id="28677" type="F" descr="eMfParam_Calibration_MaxSlope2">110</param>
+					<param id="28692" type="F" descr="eMfParam_Calibration_MinZeroPoint2">6.5</param>
+					<param id="28693" type="F" descr="eMfParam_Calibration_MaxZeroPoint2">7.5</param>
+					<param id="28678" type="F" descr="eMfParam_Calibration_MinSlope3">90</param>
+					<param id="28679" type="F" descr="eMfParam_Calibration_MaxSlope3">110</param>
+					<param id="28694" type="F" descr="eMfParam_Calibration_MinZeroPoint3">6.5</param>
+					<param id="28695" type="F" descr="eMfParam_Calibration_MaxZeroPoint3">7.5</param>
+					<param id="28680" type="F" descr="eMfParam_Calibration_MinSlope4">90</param>
+					<param id="28681" type="F" descr="eMfParam_Calibration_MaxSlope4">110</param>
+					<param id="28696" type="F" descr="eMfParam_Calibration_MinZeroPoint4">6.5</param>
+					<param id="28697" type="F" descr="eMfParam_Calibration_MaxZeroPoint4">7.5</param>
+					<param id="28682" type="F" descr="eMfParam_Calibration_MinSlope5">90</param>
+					<param id="28683" type="F" descr="eMfParam_Calibration_MaxSlope5">110</param>
+					<param id="28698" type="F" descr="eMfParam_Calibration_MinZeroPoint5">6.5</param>
+					<param id="28699" type="F" descr="eMfParam_Calibration_MaxZeroPoint5">7.5</param>
+					<param id="28684" type="F" descr="eMfParam_Calibration_MinSlope6">90</param>
+					<param id="28685" type="F" descr="eMfParam_Calibration_MaxSlope6">110</param>
+					<param id="28700" type="F" descr="eMfParam_Calibration_MinZeroPoint6">6.5</param>
+					<param id="28701" type="F" descr="eMfParam_Calibration_MaxZeroPoint6">7.5</param>
+					<param id="28686" type="F" descr="eMfParam_Calibration_MinSlope7">90</param>
+					<param id="28687" type="F" descr="eMfParam_Calibration_MaxSlope7">110</param>
+					<param id="28702" type="F" descr="eMfParam_Calibration_MinZeroPoint7">6.5</param>
+					<param id="28703" type="F" descr="eMfParam_Calibration_MaxZeroPoint7">7.5</param>
+					<param id="28688" type="F" descr="eMfParam_Calibration_MinSlope8">90</param>
+					<param id="28689" type="F" descr="eMfParam_Calibration_MaxSlope8">110</param>
+					<param id="28704" type="F" descr="eMfParam_Calibration_MinZeroPoint8">6.5</param>
+					<param id="28705" type="F" descr="eMfParam_Calibration_MaxZeroPoint8">7.5</param>
+					<param id="28711" type="F" descr="eMfParam_Calibration_MinDrift">-3.0</param>
+					<param id="28712" type="F" descr="eMfParam_Calibration_MaxDrift">3.0</param>
+					<param id="28709" type="I" descr="eMfParam_Calibration_Condition">0</param>
+					<param id="28710" type="S" descr="eMfParam_Calibration_Condition_Formula" />
+				</methodfunction>
+			</record>
+		</resourcelist>
+	</db>
+	<md5>0ae8112d78e947db433f0fa7eff25d51</md5>
+</lance>

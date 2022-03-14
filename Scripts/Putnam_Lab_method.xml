@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<lance>
+	<db>
+		<date>14.03.2022 10:23.28</date>
+		<version>0.132</version>
+		<user>SystemInternal</user>
+		<serialnumber>33</serialnumber>
+		<instrument>T50T90</instrument>
+		<resourcelist>
+			<record key="110-1" prefix="57346" type="1" mtype="2" mtitle="PutnamLab">
+				<methodfunction descr="eMethodFunctionTitle" id="2048">
+					<param id="2051" type="I" descr="eMfParam_Title_Type">2</param>
+					<param id="2059" type="I" descr="eMfParam_Title_Compatible">0</param>
+					<param id="2050" type="S" descr="eMfParam_Title_ID">110-1</param>
+					<param id="2049" type="S" descr="eMfParam_Title_Title">PutnamLab</param>
+					<param id="2052" type="S" descr="eMfParam_Title_Author">SystemInternal</param>
+					<param id="2053" type="D" descr="eMfParam_Title_DateTime">2219935569547809</param>
+					<param id="2054" type="D" descr="eMfParam_Title_Chanage_Date">2223225581472310</param>
+					<param id="2055" type="S" descr="eMfParam_Title_Chanage_User">SystemInternal</param>
+					<param id="2060" type="I" descr="eMfParam_Title_Protection">1</param>
+					<param id="2056" type="I" descr="eMfParam_Title_SOP">0</param>
+					<param id="2058" type="S" descr="eMfParam_Title_SOPLink" />
+					<param id="2057" type="S" descr="eMfParam_Title_SOPText" />
+				</methodfunction>
+				<methodfunction descr="eMethodFunctionSample" id="59392">
+					<param id="59396" type="I" descr="eMfParam_Sample_NumberOfIDs">1</param>
+					<param id="59393" type="S" descr="eMfParam_Sample_ID1">CRM 1</param>
+					<param id="59394" type="S" descr="eMfParam_Sample_ID2">TANK 6</param>
+					<param id="59395" type="S" descr="eMfParam_Sample_ID3">TANK 3</param>
+					<param id="59398" type="I" descr="eMfParam_Sample_EntryType_id">0</param>
+					<param id="59408" type="F" descr="eMfParam_Sample_Density">1.0</param>
+					<param id="59410" type="F" descr="eMfParam_Sample_CorrectionFactor">1.0</param>
+					<param id="59401" type="F" descr="eMfParam_Sample_LowerLimit_weight">0.0</param>
+					<param id="59404" type="F" descr="eMfParam_Sample_UpperLimit_weight">100</param>
+					<param id="59400" type="F" descr="eMfParam_Sample_LowerLimit_volume">0.0</param>
+					<param id="59403" type="F" descr="eMfParam_Sample_UpperLimit_volume">5.0</param>
+					<param id="59399" type="F" descr="eMfParam_Sample_LowerLimit_pieces">0</param>
+					<param id="59402" type="F" descr="eMfParam_Sample_UpperLimit_pieces">10</param>
+					<param id="59407" type="F" descr="eMfParam_Sample_WeightPerPiece">1.0</param>
+					<param id="59406" type="F" descr="eMfParam_Sample_WeightFixed">1.0</param>
+					<param id="59405" type="F" descr="eMfParam_Sample_VolumeFixed">1.0</param>
+					<param id="59411" type="F" descr="eMfParam_Sample_PiecesFixed">1</param>
+					<param id="59409" type="F" descr="eMfParam_Sample_Temperature">21.7</param>
+					<param id="59397" type="I" descr="eMfParam_Sample_Input_id">0</param>
+					<param id="59413" type="I" descr="eMfParam_Sample_DataReader">0</param>
+				</methodfunction>
+				<methodfunction descr="eMethodFunctionTitrationStand" id="75776">
+					<param id="75778" type="I" descr="eMfParam_TitrationStand_Type">10</param>
+					<param id="75777" type="I" descr="eMfParam_TitrationStand_StandName">19</param>
+					<param id="75779" type="I" descr="eMfParam_TitrationStand_LidHandling">0</param>
+					<param id="75780" type="I" descr="eMfParam_TitrationStand_DriftSource">0</param>
+					<param id="75781" type="F" descr="eMfParam_TitrationStand_MaxDrift">25.0</param>
+					<param id="75782" type="I" descr="eMfParam_TitrationStand_TOven">150</param>
+					<param id="75783" type="F" descr="eMfParam_TitrationStand_Drift">0.0</param>
+					<param id="75784" type="I" descr="eMfParam_TitrationStand_HeadPosition">0</param>
+				</methodfunction>
+				<methodfunction descr="eMethodFunctionStir" id="71680">
+					<param id="71682" type="I" descr="eMfParam_Stir_Speed">30</param>
+					<param id="71681" type="S" descr="eMfParam_Stir_Time">10</param>
+					<param id="71683" type="I" descr="eMfParam_Stir_Condition">0</param>
+					<param id="71684" type="S" descr="eMfParam_Stir_Condition_Formula" />
+				</methodfunction>
+				<methodfunction descr="eMethodFunctionTitration_EQP" id="104448">
+					<param id="104547" type="I" descr="eMfParam_Titration_EQP_SF_Titrant_Type">1</param>
+					<param id="104545" type="S" descr="eMfParam_Titration_EQP_SF_Titrant_Name">HCl</param>
+					<param id="104546" type="F" descr="eMfParam_Titration_EQP_SF_Titrant_NominalConc">0.1</param>
+					<param id="104515" type="I" descr="eMfParam_Titration_EQP_SF_Sensor_Type">3</param>
+					<param id="104513" type="S" descr="eMfParam_Titration_EQP_SF_Sensor_Name">DG115-SC</param>
+					<param id="104514" type="I" descr="eMfParam_Titration_EQP_SF_Sensor_Unit">0</param>
+					<param id="104516" type="I" descr="eMfParam_Titration_EQP_SF_Sensor_Indication">0</param>
+					<param id="104518" type="F" descr="eMfParam_Titration_EQP_SF_Sensor_IPol">15.0</param>
+					<param id="104520" type="I" descr="eMfParam_Titration_EQP_SF_Sensor_IPolFrequency">0</param>
+					<param id="104517" type="F" descr="eMfParam_Titration_EQP_SF_Sensor_UPol">200.0</param>
+					<param id="104519" type="I" descr="eMfParam_Titration_EQP_SF_Sensor_IonCharge">2</param>
+					<param id="104929" type="I" descr="eMFParam_Titration_EQP_SF_TempMonitoring_TempMeasurement">1</param>
+					<param id="104930" type="S" descr="eMFParam_Titration_EQP_SF_TempMonitoring_TempSensorName">DT1000</param>
+					<param id="104931" type="I" descr="eMFParam_Titration_EQP_SF_TempMonitoring_Unit">18</param>
+					<param id="104481" type="I" descr="eMfParam_Titration_EQP_SF_Stir_Speed">20</param>
+					<param id="104673" type="I" descr="eMfParam_Titration_EQP_SF_PreDisp_Mode">1</param>
+					<param id="104675" type="F" descr="eMfParam_Titration_EQP_SF_PreDisp_Potential">100</param>
+					<param id="104674" type="S" descr="eMfParam_Titration_EQP_SF_PreDisp_Volume">1.0</param>
+					<param id="104677" type="S" descr="eMfParam_Titration_EQP_SF_PreDisp_Factor">1.0</param>
+					<param id="104678" type="I" descr="eMfParam_Titration_EQP_SF_PreDisp_Wait">120</param>
+					<param id="104993" type="I" descr="eMfParam_Titration_EQP_SF_Control_TitrationControl">3</param>
+					<param id="105000" type="I" descr="eMfParam_Titration_EQP_SF_Control_MeasureMode">0</param>
+					<param id="105008" type="I" descr="eMfParam_Titration_EQP_SF_Control_AppMode">0</param>
+					<param id="105007" type="I" descr="eMfParam_Titration_EQP_SF_Control_ShowParam">1</param>
+					<param id="104994" type="I" descr="eMfParam_Titration_EQP_SF_Control_TitrantAddMode">0</param>
+					<param id="104995" type="F" descr="eMfParam_Titration_EQP_SF_Control_Delta_E_Set">8.0</param>
+					<param id="105001" type="F" descr="eMfParam_Titration_EQP_SF_Control_Drift_E">0.2</param>
+					<param id="104999" type="F" descr="eMfParam_Titration_EQP_SF_Control_Delta_V">0.1</param>
+					<param id="104997" type="F" descr="eMfParam_Titration_EQP_SF_Control_Delta_V_Min">0.02</param>
+					<param id="104998" type="F" descr="eMfParam_Titration_EQP_SF_Control_Delta_V_Max">0.2</param>
+					<param id="104996" type="F" descr="eMfParam_Titration_EQP_SF_Control_Delta_T_Set">0.02</param>
+					<param id="105003" type="F" descr="eMfParam_Titration_EQP_SF_Control_Delta_t">3</param>
+					<param id="105002" type="F" descr="eMfParam_Titration_EQP_SF_Control_Drift_T">0.5</param>
+					<param id="105004" type="F" descr="eMfParam_Titration_EQP_SF_Control_t_min">3</param>
+					<param id="105005" type="F" descr="eMfParam_Titration_EQP_SF_Control_t_max">30</param>
+					<param id="105006" type="F" descr="eMfParam_Titration_EQP_SF_Control_t_fix">3</param>
+					<param id="105113" type="I" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_EvaluationMode">0</param>
+					<param id="105098" type="I" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_EQPCriterias_Range1">0</param>
+					<param id="105099" type="I" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_EQPCriterias_Range2">0</param>
+					<param id="105100" type="I" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_EQPCriterias_Range3">0</param>
+					<param id="105093" type="S" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_Upper1">200.0</param>
+					<param id="105095" type="S" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_Upper2">200.0</param>
+					<param id="105097" type="S" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_Upper3">200.0</param>
+					<param id="105092" type="S" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_Lower1">100.0</param>
+					<param id="105094" type="S" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_Lower2">100.0</param>
+					<param id="105096" type="S" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_Lower3">100.0</param>
+					<param id="105110" type="I" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_HighestValues1">1</param>
+					<param id="105111" type="I" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_HighestValues2">1</param>
+					<param id="105112" type="I" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_HighestValues3">1</param>
+					<param id="105107" type="I" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_LowestValues1">1</param>
+					<param id="105108" type="I" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_LowestValues2">1</param>
+					<param id="105109" type="I" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_LowestValues3">1</param>
+					<param id="105101" type="I" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_LastJumps1">1</param>
+					<param id="105102" type="I" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_LastJumps2">1</param>
+					<param id="105103" type="I" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_LastJumps3">1</param>
+					<param id="105105" type="I" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_SteepestJumps2">1</param>
+					<param id="105106" type="I" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_SteepestJumps3">1</param>
+					<param id="105104" type="I" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_SteepestJumps1">1</param>
+					<param id="105090" type="I" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_Tendency">0</param>
+					<param id="105089" type="F" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_Threshhold">200.0</param>
+					<param id="105091" type="I" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_Ranges">0</param>
+					<param id="105116" type="I" descr="eMfParam_Titration_EQP_SF_EvaluationRecognition_BufferCapacity">0</param>
+					<param id="104833" type="S" descr="eMfParam_Titration_EQP_SF_Termination_MaxVolume">3.56</param>
+					<param id="104839" type="I" descr="eMfParam_Titration_EQP_SF_Termination_SetPot">1</param>
+					<param id="104834" type="S" descr="eMfParam_Titration_EQP_SF_Termination_Potential">227</param>
+					<param id="104835" type="I" descr="eMfParam_Titration_EQP_SF_Termination_Potential_Tendency">2</param>
+					<param id="104840" type="I" descr="eMfParam_Titration_EQP_SF_Termination_SetSlope">0</param>
+					<param id="104836" type="S" descr="eMfParam_Titration_EQP_SF_Termination_Slope">10.0</param>
+					<param id="104841" type="I" descr="eMfParam_Titration_EQP_SF_Termination_SetNEQPs">1</param>
+					<param id="104837" type="S" descr="eMfParam_Titration_EQP_SF_Termination_NumberEQPs">1</param>
+					<param id="104838" type="I" descr="eMfParam_Titration_EQP_SF_Termination_Combination">1</param>
+					<param id="105345" type="I" descr="eMfParam_Titration_EQP_SF_AccompanyingStatingUse">0</param>
+					<param id="105313" type="I" descr="eMfParam_Titration_EQP_SF_Condition_Condition">0</param>
+					<param id="105314" type="S" descr="eMfParam_Titration_EQP_SF_Condition_Formula" />
+				</methodfunction>
+				<methodfunction descr="eMethodFunctionCalculation" id="26624">
+					<param id="26647" type="I" descr="eMfParam_Calculation_ResultType">1</param>
+					<param id="26648" type="I" descr="eMfParam_Calculation_CalcType">0</param>
+					<param id="26649" type="I" descr="eMfParam_Calculation_SelectedEQP">1</param>
+					<param id="26625" type="S" descr="eMfParam_Calculation_Result">Consumption</param>
+					<param id="26626" type="S" descr="eMfParam_Calculation_ResultUnit">mL</param>
+					<param id="26627" type="S" descr="eMfParam_Calculation_Formula">R1=VEQ</param>
+					<param id="26628" type="S" descr="eMfParam_Calculation_Constant">1</param>
+					<param id="26629" type="S" descr="eMfParam_Calculation_MolecularWeight">M[None]</param>
+					<param id="26631" type="I" descr="eMfParam_Calculation_DecimalPlaces">3</param>
+					<param id="26632" type="I" descr="eMfParam_Calculation_ResultLimits">0</param>
+					<param id="26633" type="F" descr="eMfParam_Calculation_ResultLowerLimit">0.0</param>
+					<param id="26634" type="F" descr="eMfParam_Calculation_ResultUpperLimit">100.0</param>
+					<param id="26635" type="I" descr="eMfParam_Calculation_Interrupt">0</param>
+					<param id="26636" type="I" descr="eMfParam_Calculation_Statistics">0</param>
+					<param id="26646" type="I" descr="eMfParam_Calculation_StatisticsRecord">1</param>
+					<param id="26638" type="I" descr="eMfParam_Calculation_MultipleDetermination">0</param>
+					<param id="26639" type="I" descr="eMfParam_Calculation_NumberOfSamples">2</param>
+					<param id="26642" type="I" descr="eMfParam_Calculation_Protocol">0</param>
+					<param id="26641" type="I" descr="eMfParam_Calculation_MultipleDeterminationInterrupt">0</param>
+					<param id="26640" type="F" descr="eMfParam_Calculation_MultipleDeterminationMaxDeviation">1.0</param>
+					<param id="26637" type="F" descr="eMfParam_Calculation_MaxDeviation">1.0</param>
+					<param id="26630" type="S" descr="eMfParam_Calculation_EquivalenceNumber">z[None]</param>
+					<param id="26643" type="I" descr="eMfParam_Calculation_SendToBuffer">0</param>
+					<param id="26653" type="I" descr="eMfParam_Calculation_RFIDWriter">0</param>
+					<param id="26644" type="I" descr="eMfParam_Calculation_Condition">0</param>
+					<param id="26645" type="S" descr="eMfParam_Calculation_Condition_Formula" />
+					<param id="26651" type="S" descr="eMfParam_Calculation_AuxValue">AuxValue</param>
+					<param id="26650" type="S" descr="eMfParam_Calculation_Blank">Blank</param>
+				</methodfunction>
+				<methodfunction descr="eMethodFunctionReport" id="55296">
+					<param id="55327" type="S" descr="eMfParam_Report_LabX_Template">Titration report</param>
+					<param id="55329" type="S" descr="eMfParam_Report_LabX_GUID" />
+					<param id="55328" type="I" descr="eMfParam_Report_LabX_Print">0</param>
+					<param id="55316" type="I" descr="eMfParam_Report_Cond">0</param>
+					<param id="55317" type="S" descr="eMfParam_Report_Condition_Formula" />
+				</methodfunction>
+				<methodfunction descr="eMethodFunctionEndOfSample" id="43008">
+					<param id="43009" type="I" descr="eMfParam_EndOfSample_OpenSeries">0</param>
+				</methodfunction>
+			</record>
+		</resourcelist>
+	</db>
+	<md5>bd9b3156fcbfaccecce3efb739f9f9d9</md5>
+</lance>

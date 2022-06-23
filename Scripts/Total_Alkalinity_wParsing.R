@@ -30,13 +30,13 @@ library(seacarb) #used to calculate TA
 library(tidyverse)
 
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
-path<-"Data/BlueTank_Titrations/20220608/" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_20220608.csv" # name of your file with masses
-titrationfile<-'20220608_PutnamLabPutnamLab.csv'# name of the last titration file run
+path<-"Data/BlueTank_Titrations/20220623/" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_20220623.csv" # name of your file with masses
+titrationfile<-'20220623_LZ.csv'# name of the last titration file run
 
 
 # Date that the data were run
-date<-'20220608'
+date<-'20220623'
 
 #DO NOT CHANGE ANYTHING BELOW THIS LINE UNLESS A NEW BOTTLE OF ACID IS USED
 
@@ -211,5 +211,9 @@ write.table(TA,paste0(path,"/","TA_Output_",titrationfile),sep=",", row.names=FA
 cumu.data <- read.csv("Data/Cumulative_TA_Output.csv", header=TRUE, sep=",")
 update.data <- rbind(cumu.data, TA)
 
+#check that your new data has been appended to the cumulative TA dataframe (added 20220623 by LZ)
+tail(update.data)
+
+#export data as csv file
 write.table(update.data,"Data/Cumulative_TA_Output.csv",sep=",", row.names=FALSE)
 

@@ -30,13 +30,13 @@ library(seacarb) #used to calculate TA
 library(tidyverse)
 
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
-path<-"Data/BlueTank_Titrations/20220623/" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_20220623.csv" # name of your file with masses
-titrationfile<-'20220623_LZ.csv'# name of the last titration file run
+path<-"Data/BlueTank_Titrations/20220630/" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_20220630.csv" # name of your file with masses
+titrationfile<-'20220630_LZ.csv'# name of the last titration file run
 
 
 # Date that the data were run
-date<-'20220623'
+date<-'20220630'
 
 #DO NOT CHANGE ANYTHING BELOW THIS LINE UNLESS A NEW BOTTLE OF ACID IS USED
 
@@ -105,6 +105,7 @@ colnames(TA)<-c("SampleID",'TA','Mass','Salinity') # changed Sample.ID1 to Sampl
 
 #run a for loop to bring in the titration files one at a time and calculate TA
 # read in the mega concatenated titration results file
+
 filename<-file.path(path,titrationfile)
 
 AllData<-read.csv(filename, sep=",", na.string="NA", as.is=T, skip=4)[ ,1:5]
@@ -167,7 +168,7 @@ for(i in 1:nrows) {
   
   #Danielle Becker updated script and changed acid to new batch #A22 on 20220127
   
-  d<-(-0.00000400*mean(Data$Temperature[mV], na.rm=T)^2-0.0001116*mean(Data$Temperature[mV], na.rm=T)+1.02881) #20220127 Batch A22 DMBP
+d<-(-0.00000400*mean(Data$Temperature[mV], na.rm=T)^2-0.0001116*mean(Data$Temperature[mV], na.rm=T)+1.02881) #20220127 Batch A22 DMBP
   
   
   #concentration of your titrant: CHANGE EVERYTIME ACID IS CHANGED 

@@ -18,7 +18,7 @@
 #new acid bottle 20220127 by Danielle Becker - new batch number A22, updated script calculation
 
 #------------------------------------------------------------
-rm(list=ls())
+rm(list=ls()) # sweep environment
 
 #set working directory---------------------------------------------------------------------------------------------
 
@@ -30,13 +30,13 @@ library(seacarb) #used to calculate TA
 library(tidyverse)
 
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
-path<-"Data/BlueTank_Titrations/20220630/" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_20220630.csv" # name of your file with masses
-titrationfile<-'20220630_LZ.csv'# name of the last titration file run
+path<-"Data/BlueTank_Titrations/20220713/" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_20220713.csv" # name of your file with masses
+titrationfile<-'20220713_CRM_LZ.csv'# name of the last titration file run
 
 
 # Date that the data were run
-date<-'20220630'
+date<-'20220713'
 
 #DO NOT CHANGE ANYTHING BELOW THIS LINE UNLESS A NEW BOTTLE OF ACID IS USED
 
@@ -87,7 +87,6 @@ dev.off()
 pH35<-mod.pH$coefficients[1]+mod.pH$coefficients[2]*3.5
 
 pH3<-mod.pH$coefficients[1]+mod.pH$coefficients[2]*3
-
 
 
 ##### titration###########
@@ -215,6 +214,7 @@ update.data <- rbind(cumu.data, TA)
 #check that your new data has been appended to the cumulative TA dataframe (added 20220623 by LZ)
 tail(update.data)
 
+getwd()
 #export data as csv file
 write.table(update.data,"Data/Cumulative_TA_Output.csv",sep=",", row.names=FALSE)
 

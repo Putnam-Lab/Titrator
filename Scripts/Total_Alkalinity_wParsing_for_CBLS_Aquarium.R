@@ -16,13 +16,14 @@
 #modified 20210221 Danielle Becker - set different mass file and Titratorfile to match code
 #modified 20210318 Danielle Becker - opened a new acid titrant, same batch #A16
 #new acid bottle 20220127 by Danielle Becker - new batch number A22, updated script calculation
+# modified 20220720 by Lauren Zane - added date column for each sample; create cumulative TA .csv for CBLS aquarium titrations (URI)
 
 #------------------------------------------------------------
 rm(list=ls()) # sweep environment
 
 #set working directory---------------------------------------------------------------------------------------------
 
-setwd("/Users/laurenzane/Desktop/Putnam_Lab/Titrator/Data")
+setwd("C:/Users/PPP Lab/Documents/Titrator")
 main<-getwd()
 
 #load libraries----------------------------------------------
@@ -30,13 +31,13 @@ library(seacarb) #used to calculate TA
 library(tidyverse)
 
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
-path<-"BlueTank_Titrations/20220713/" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_20220713.csv" # name of your file with masses
-titrationfile<-'20220713_CRM_LZ.csv'# name of the last titration file run
+path<-"Data/BlueTank_Titrations/20220608/" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_20220608.csv" # name of your file with masses
+titrationfile<-'20220608_PutnamLabPutnamLab.csv'# name of the last titration file run
 
 
 # Date that the data were run
-date<-'20220713'
+date<-'20220608'
 
 #DO NOT CHANGE ANYTHING BELOW THIS LINE UNLESS A NEW BOTTLE OF ACID IS USED
 
@@ -50,7 +51,7 @@ Mass<-read.csv(file.path(path,massfile), header=T, sep=",", na.string="NA", as.i
 
 #### pH Calibration #####
 
-pHCal<-read.csv("pHCalibration.csv") # read in the pH Calibration file
+pHCal<-read.csv("Data/pHCalibration.csv") # read in the pH Calibration file
 
 
 
@@ -197,7 +198,7 @@ d<-(-0.00000400*mean(Data$Temperature[mV], na.rm=T)^2-0.0001116*mean(Data$Temper
   #Calculate TA
   
   #at function is based on code in seacarb package by Steve Comeau, Heloise Lavigne and Jean-Pierre Gattuso
-  TA[i,1]<-date #exports the date into output file, column 1
+  TA[i,1]<-date #exports the date into output file, column 1; added by LZ 20220720
   TA[i,2]<-name #exports the sample ID into output file, column 2
   TA[i,3]<-1000000*at(S=s,T=mean(Data$Temperature[mV], na.rm=T), C=c, d=d, pHTris=NULL, ETris=NULL, weight=mass, E=Data$mV[mV], volume=Data$Volume[mV])
   TA[i,4]<-mass #exports the mass into the TA output file, column 4
@@ -206,17 +207,22 @@ d<-(-0.00000400*mean(Data$Temperature[mV], na.rm=T)^2-0.0001116*mean(Data$Temper
 
 TA[,3:4]<-sapply(TA[,3:4], as.numeric) # make sure the appropriate columns are numeric
 
-#exports your data as a CSV file
-write.table(TA,paste0(path,"/","TA_Output_",titrationfile),sep=",", row.names=FALSE)
+#exports your data as a CSV file to folder of the day e.g. 20220720
+
+write.table(TA,paste0(path,"/","CBLS_Aquarium_TA_output",titrationfile),sep=",", row.names=FALSE)
 
 #Cumulative TA
-cumu.data <- read.csv("CBLS_Aquarium_TA_Output.csv", header=TRUE, sep=",")
-update.data <- rbind(cumu.data, TA)
+cumu.data <- read.csv("Data/CBLS_Aquarium_TA.csv", header=TRUE, sep=",")
+
+update.data <- rbind(cumu.data, TA) # updating cumulative TA dataframe with current values
+
+
 
 #check that your new data has been appended to the cumulative TA dataframe (added 20220623 by LZ)
 tail(update.data)
 
-getwd()
-#export data as csv file
-write.table(update.data,"Data/CBLS_Aquarium_TA_Output.csv",sep=",", row.names=FALSE)
+
+#export data as csv file to Data directory 
+write.table(update.data,"Data/CBLS_Aquarium_TA.csv",sep=",", row.names=FALSE) 
+
 

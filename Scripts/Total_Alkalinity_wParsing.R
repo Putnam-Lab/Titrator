@@ -30,13 +30,13 @@ library(seacarb) #used to calculate TA
 library(tidyverse)
 
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
-path<-"Data/BlueTank_Titrations/20220722/" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_CRM_20220722.csv" # name of your file with masses
-titrationfile<-'20220722_LZ_CRM_test.csv'# name of the last titration file run
+path<-"Data/E5_Titrations/20220729_E5_2020_LHZ//" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_CRM_20220729_LZ.csv" # name of your file with masses
+titrationfile<-'20220729_E5_CRM_LZ.csv'# name of the last titration file run
 
 
 # Date that the data were run
-date<-'20220722'
+date<-'20220729'
 
 #DO NOT CHANGE ANYTHING BELOW THIS LINE UNLESS A NEW BOTTLE OF ACID IS USED
 

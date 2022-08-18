@@ -23,6 +23,7 @@ rm(list=ls()) # sweep environment
 #set working directory---------------------------------------------------------------------------------------------
 
 setwd("C:/Users/PPP Lab/Documents/Titrator")
+setwd("~/MyProjects/Putnam_Lab/Titrator")
 main<-getwd()
 
 #load libraries----------------------------------------------
@@ -30,9 +31,9 @@ library(seacarb) #used to calculate TA
 library(tidyverse)
 
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
-path<-"Data/E5_Titrations/20220729_E5_2020_LHZ//" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_CRM_20220729_LZ.csv" # name of your file with masses
-titrationfile<-'20220729_E5_CRM_LZ.csv'# name of the last titration file run
+path<-"Data/E5_Titrations/20220729_E5_2020_LHZ" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_E5_20220729_LZ.csv" # name of your file with masses
+titrationfile<-'20220729_E5_LZ.csv'# name of the last titration file run
 
 
 # Date that the data were run

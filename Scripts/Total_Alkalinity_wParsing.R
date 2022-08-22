@@ -23,18 +23,20 @@ rm(list=ls()) # sweep environment
 #set working directory---------------------------------------------------------------------------------------------
 
 setwd("C:/Users/PPP Lab/Documents/Titrator")
-setwd("~/MyProjects/Putnam_Lab/Titrator")
 main<-getwd()
+getwd() # check path
 
 #load libraries----------------------------------------------
 library(seacarb) #used to calculate TA
+## NOTE: newer versions of the seacarb package have a hard time recognizing the "at" function
+## you need to check that the version installed is version 3.2, not version 3.3.1 which is the newest version of the "seacarb"
+## package as of 20220822
+## LZ replaced v 3.3.1 with version 3.2 from the CRAN archive (https://cran.r-project.org/src/contrib/Archive/seacarb/) 20220822
 library(tidyverse)
-
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
-path<-"Data/E5_Titrations/20220729_E5_2020_LHZ" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_E5_20220729_LZ.csv" # name of your file with masses
+path<-"Data/E5_Titrations/E5_2020_Calcification_Samples/20220729_E5_2020_LHZ/" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_E5_20220729_LZ.csv"  #name of the mass file 
 titrationfile<-'20220729_E5_LZ.csv'# name of the last titration file run
-
 
 # Date that the data were run
 date<-'20220729'

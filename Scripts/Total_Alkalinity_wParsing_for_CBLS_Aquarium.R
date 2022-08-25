@@ -24,7 +24,7 @@ rm(list=ls()) # sweep environment
 
 #set working directory---------------------------------------------------------------------------------------------
 
-setwd("/Users/laurenzane/Desktop/Putnam_Lab/Titrator/Data")
+
 setwd("C:/Users/PPP Lab/Documents/Titrator")
 main<-getwd()
 getwd()
@@ -34,13 +34,13 @@ library(tidyverse)
 
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
 
-path<-"Data/BlueTank_Titrations/20220729/" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_20220729.csv" # name of your file with masses
-titrationfile<-'20220729_LZ.csv'# name of the last titration file run
+path<-"Data/BlueTank_Titrations/20220825/" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_20220825.csv" # name of your file with masses
+titrationfile<-'20220822_LZ_JA.csv'# name of the last titration file run
 
 
 # Date that the data were run
-date<-'20220729'
+date<-'20220825'
 
 
 #DO NOT CHANGE ANYTHING BELOW THIS LINE UNLESS A NEW BOTTLE OF ACID IS USED

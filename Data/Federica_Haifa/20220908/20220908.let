@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExportTemplate xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.mt.com/LabXExportTemplateExchange.xsd">
+  <MappedEntityTypeName xmlns="http://schemas.datacontract.org/2004/07/MT.Sequoia.ImportExport.Exchange">ResultSet</MappedEntityTypeName>
+  <MappedEntityTypeNameForAuthorizationCheck xmlns="http://schemas.datacontract.org/2004/07/MT.Sequoia.ImportExport.Exchange">ResultSet</MappedEntityTypeNameForAuthorizationCheck>
+  <MappingTemplate xmlns="http://schemas.datacontract.org/2004/07/MT.Sequoia.ImportExport.Exchange">
+    <DecimalSeparatorChar>.</DecimalSeparatorChar>
+    <EncodingFormat>AsciiEncoding</EncodingFormat>
+    <FileFormat>CsvSimple</FileFormat>
+    <IsDumpHeader>false</IsDumpHeader>
+    <IsEncapsulateValues>false</IsEncapsulateValues>
+    <IsMultipleSamplePerTask>false</IsMultipleSamplePerTask>
+    <IsOneLinePerSample>true</IsOneLinePerSample>
+    <IsQuickTemplate>true</IsQuickTemplate>
+    <ItemSeparatorChar>,</ItemSeparatorChar>
+    <NewLine>&lt;CR&gt;&lt;LF&gt;</NewLine>
+    <SeparatorChar>,</SeparatorChar>
+    <TemplateItems>
+      <TemplateItem xmlns:d4p1="http://schemas.datacontract.org/2004/07/MT.Sequoia.ImportExport.Exchange.MappingTemplateItems" i:type="d4p1:LeafMapping">
+        <DisplayName>Table of Measured Values</DisplayName>
+        <ExportedPropertyName>SimpleMeasuredValueTables</ExportedPropertyName>
+        <FormatString></FormatString>
+        <HasPositioningRestrictions>false</HasPositioningRestrictions>
+        <ListOrder>0</ListOrder>
+        <NameInLabX>SimpleMeasuredValueTables</NameInLabX>
+        <d4p1:OriginalPropertyName>SimpleMeasuredValueTables</d4p1:OriginalPropertyName>
+      </TemplateItem>
+    </TemplateItems>
+  </MappingTemplate>
+  <Name xmlns="http://schemas.datacontract.org/2004/07/MT.Sequoia.ImportExport.Exchange">20220903_Run2</Name>
+  <Version xmlns="http://schemas.datacontract.org/2004/07/MT.Sequoia.ImportExport.Exchange">10.0.0.731</Version>
+  <DoesExportOkResultsOnly>false</DoesExportOkResultsOnly>
+  <ExportPath>C:\Users\PPP Lab\Documents\Puritz_Titrator\Data\20220903_DO_CA_SE</ExportPath>
+  <ExportedFileExtension>csv</ExportedFileExtension>
+  <ExportedFileName>20220903_Run2</ExportedFileName>
+  <IsUpdateAtEndOfSample>false</IsUpdateAtEndOfSample>
+  <IsUpdateFileAfterResultSigning>false</IsUpdateFileAfterResultSigning>
+  <IsUpdateFileAtEndOfTask>true</IsUpdateFileAtEndOfTask>
+  <IsUpdateFilePerSampleMeasurement>false</IsUpdateFilePerSampleMeasurement>
+  <IsUpdateFileWhenTaskIsAborted>false</IsUpdateFileWhenTaskIsAborted>
+  <IsUpdateFileWhenTaskIsPaused>true</IsUpdateFileWhenTaskIsPaused>
+  <WriteMode>Overwrite</WriteMode>
+</ExportTemplate>

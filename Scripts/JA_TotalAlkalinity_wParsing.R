@@ -1,3 +1,5 @@
+##Jill running Federica's TA samples from Hawaii 2022
+
 #Calculate total alkalinity using potentiometric titrations
 #Uses a for loop to read in data exported as a titration file and calculate Total alkalinity
 #At the end it exports your data as a .csv file. Comment the last line out if your don't want that.
@@ -16,32 +18,30 @@
 #modified 20210221 Danielle Becker - set different mass file and Titratorfile to match code
 #modified 20210318 Danielle Becker - opened a new acid titrant, same batch #A16
 #new acid bottle 20220127 by Danielle Becker - new batch number A22, updated script calculation
-# modified 20220720 by Lauren Zane - added date column for each sample; create cumulative TA .csv for CBLS aquarium titrations (URI)
-
 
 #------------------------------------------------------------
 rm(list=ls()) # sweep environment
 
 #set working directory---------------------------------------------------------------------------------------------
 
-
 setwd("C:/Users/PPP Lab/Documents/Titrator")
 main<-getwd()
-getwd()
+getwd() # check path
+
 #load libraries----------------------------------------------
 library(seacarb) #used to calculate TA
+## NOTE: newer versions of the seacarb package have a hard time recognizing the "at" function
+## you need to check that the version installed is version 3.2, not version 3.3.1 which is the newest version of the "seacarb"
+## package as of 20220822
+## LZ replaced v 3.3.1 with version 3.2 from the CRAN archive (https://cran.r-project.org/src/contrib/Archive/seacarb/) 20220822
 library(tidyverse)
-
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
-
-path<-"Data/BlueTank_Titrations/20230209/" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_20230209.csv" # name of your file with masses
-titrationfile<-'20230209_BlueTankLZ.csv'# name of the last titration file run
-
+path<-"Data/Federica_Haifa/20220914" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_CRM2_20220914.csv"  #name of the mass file 
+titrationfile<-'20220914.csv'# name of the last titration file run
 
 # Date that the data were run
-date<-'20230209'
-
+date<-'20220914'
 
 #DO NOT CHANGE ANYTHING BELOW THIS LINE UNLESS A NEW BOTTLE OF ACID IS USED
 
@@ -51,12 +51,11 @@ date<-'20230209'
 
 Mass<-read.csv(file.path(path,massfile), header=T, sep=",", na.string="NA", as.is=T) 
 
-
+colnames(Mass) <- c("SampleID","Mass","Salinity")
 
 #### pH Calibration #####
 
 pHCal<-read.csv("Data/pHCalibration.csv") # read in the pH Calibration file
-
 
 
 
@@ -101,12 +100,11 @@ pH3<-mod.pH$coefficients[1]+mod.pH$coefficients[2]*3
 
 nrows<-nrow(Mass) #need file length/number of rows
 
-TA <- data.frame(matrix(nrow = nrows, ncol = 5)) # changed from 4 columns to 5 LZ 20220720
+TA <- data.frame(matrix(nrow = nrows, ncol = 4))
 
 rownames(TA)<-Mass$Sample.ID1[1:nrows]
 
-colnames(TA)<-c("Date","SampleID",'TA','Mass','Salinity') # added date column LZ 20220720
-# changed Sample.ID1 to SampleID in the TA data frame only
+colnames(TA)<-c("SampleID",'TA','Mass','Salinity') # changed Sample.ID1 to SampleID in the TA data frame only
 
 
 #run a for loop to bring in the titration files one at a time and calculate TA
@@ -120,7 +118,7 @@ AllData<-read.csv(filename, sep=",", na.string="NA", as.is=T, skip=4)[ ,1:5]
 sample_name_positions <- c(1,grep("^Scope", AllData[,1]), nrow(AllData))
 
 ## parse through all the data in the one file ###
-sample_names<-Mass$Sample.ID1
+sample_names<-Mass$SampleID
 # create a list with all the sample IDs
 sample_names_list <- list()
 for (item in 1:length(sample_names)){
@@ -174,7 +172,7 @@ for(i in 1:nrows) {
   
   #Danielle Becker updated script and changed acid to new batch #A22 on 20220127
   
-  d<- (-0.00000400*mean(Data$Temperature[mV], na.rm=T)^2-0.0001116*mean(Data$Temperature[mV], na.rm=T)+1.02881) #20220127 Batch A22 DMBP
+  d<-(-0.00000400*mean(Data$Temperature[mV], na.rm=T)^2-0.0001116*mean(Data$Temperature[mV], na.rm=T)+1.02881) #20220127 Batch A22 DMBP
   
   
   #concentration of your titrant: CHANGE EVERYTIME ACID IS CHANGED 
@@ -192,45 +190,35 @@ for(i in 1:nrows) {
   
   
   #Salinity of your samples, set salinity for all titrations using a junk or CRM (single value)
-  s<-Mass[Mass$Sample.ID1==name,3]
+  s<-Mass[Mass$SampleID==name,3]
   #s<-Mass[name,2]
   
   #mass of sample in g: changed with every sample
   #mass<-Mass[name,1]
-  mass<-Mass[Mass$Sample.ID1==name,2]
+  mass<-Mass[Mass$SampleID==name,2]
   #sample.index<-Mass[Mass$Sample.ID1==name,3]# this is the order that the sample was run
   #-------------------------------------------------------------------
   #Calculate TA
   
-  #at function is based on code in seacarb package by Steve Comeau, Heloise Lavigne and Jean-Pierre Gattuso
-
-
-  TA[i,1]<-date #exports the date into output file, column 1; added by LZ 20220720
-  TA[i,2]<-name #exports the sample ID into output file, column 2
-  TA[i,3]<-1000000*at(S=s,T=mean(Data$Temperature[mV], na.rm=T), C=c, d=d, pHTris=NULL, ETris=NULL, weight=mass, E=Data$mV[mV], volume=Data$Volume[mV])
-  TA[i,4]<-mass #exports the mass into the TA output file, column 4
-  TA[i,5]<-s #exports the salinity column into the output file, column 5
+  #at function is based on code in saecarb package by Steeve Comeau, Heloise Lavigne and Jean-Pierre Gattuso
+  TA[i,1]<-name #exports the sample ID into output file, column 1
+  TA[i,2]<-1000000*at(S=s,T=mean(Data$Temperature[mV], na.rm=T), C=c, d=d, pHTris=NULL, ETris=NULL, weight=mass, E=Data$mV[mV], volume=Data$Volume[mV])
+  TA[i,3]<-mass #exports the mass into the TA output file, column 3 
+  TA[i,4]<-s #exports the salinity column into the output file, column 4
 }
 
-TA[,3:4]<-sapply(TA[,3:4], as.numeric) # make sure the appropriate columns are numeric
+TA[,2:3]<-sapply(TA[,2:3], as.numeric) # make sure the appropriate columns are numeric
 
 #exports your data as a CSV file
 write.table(TA,paste0(path,"/","TA_Output_",titrationfile),sep=",", row.names=FALSE)
 
 #Cumulative TA
-cumu.data <- read.csv("Data/CBLS_Aquarium_TA.csv", header=TRUE, sep=",")
+cumu.data <- read.csv("Data/Cumulative_TA_Output.csv", header=TRUE, sep=",")
 update.data <- rbind(cumu.data, TA)
-#exports your data as a CSV file to folder of the day e.g. 20220720
-
-write.table(TA,paste0(path,"/","CBLS_Aquarium_TA.csv",titrationfile),sep=",", row.names=FALSE)
-
 
 #check that your new data has been appended to the cumulative TA dataframe (added 20220623 by LZ)
 tail(update.data)
 
-
-#export data as csv file to Data directory 
-write.table(update.data,"Data/CBLS_Aquarium_TA.csv",sep=",", row.names=FALSE) 
-
-
-
+getwd()
+#export data as csv file
+write.table(update.data,"Data/Cumulative_TA_Output.csv",sep=",", row.names=FALSE)

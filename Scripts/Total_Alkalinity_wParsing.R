@@ -34,12 +34,12 @@ library(seacarb) #used to calculate TA
 ## LZ replaced v 3.3.1 with version 3.2 from the CRAN archive (https://cran.r-project.org/src/contrib/Archive/seacarb/) 20220822
 library(tidyverse)
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
-path<-"Data/E5_Titrations/E5_2020_Calcification_Samples/20220729_E5_2020_LHZ/" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_E5_20220729_LZ.csv"  #name of the mass file 
-titrationfile<-'20220729_E5_LZ.csv'# name of the last titration file run
+path<-"Data/Titrator_Troubleshooting/20220930/" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_CRM_20220930.csv"  #name of the mass file 
+titrationfile<-'20220930_CRM.csv'# name of the last titration file run
 
 # Date that the data were run
-date<-'20220729'
+date<-'20220930'
 
 #DO NOT CHANGE ANYTHING BELOW THIS LINE UNLESS A NEW BOTTLE OF ACID IS USED
 
@@ -49,7 +49,7 @@ date<-'20220729'
 
 Mass<-read.csv(file.path(path,massfile), header=T, sep=",", na.string="NA", as.is=T) 
 
-
+#Mass <- c()
 
 #### pH Calibration #####
 
@@ -169,15 +169,19 @@ for(i in 1:nrows) {
   #d<-(-0.00000410*mean(Data$Temperature[mV], na.rm=T)^2-0.0001065*mean(Data$Temperature[mV], na.rm=T)+1.02884) #20190731 Batch A16
   
   #Danielle Becker updated script and changed acid to new batch #A22 on 20220127
+  #d<-(-0.00000400*mean(Data$Temperature[mV], na.rm=T)^2-0.0001116*mean(Data$Temperature[mV], na.rm=T)+1.02881) #20220127 Batch A22 DMBP
   
-d<-(-0.00000400*mean(Data$Temperature[mV], na.rm=T)^2-0.0001116*mean(Data$Temperature[mV], na.rm=T)+1.02881) #20220127 Batch A22 DMBP
+  #Amy Zyck updated script and changed acid to new batch #A24 on 20220930
   
+  d<-(-0.00000410*mean(Data$Temperature[mV], na.rm=T)^2-0.0001069*mean(Data$Temperature[mV], na.rm=T)+1.02882) #20220930 Batch A24 AZ
   
   #concentration of your titrant: CHANGE EVERYTIME ACID IS CHANGED 
   
   #c<-0.100010 ##Batch A16 first used by SJG on 20190731
   
-  c<-0.100347 ##Batch A22 first used by DMBP on 20220127
+  #c<-0.100347 ##Batch A22 first used by DMBP on 20220127
+  
+  c<-0.099922 ##Batch A24 first used by AZ & LZ on 20220930
   
   
   

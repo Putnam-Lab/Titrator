@@ -34,13 +34,13 @@ library(tidyverse)
 
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
 
-path<-"Data/BlueTank_Titrations/20230221/" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_20230221.csv" # name of your file with masses
-titrationfile<-'20230221_BLUE_TANK_LZ.CSV'# name of the last titration file run
+path<-"Data/BlueTank_Titrations/20230308/" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_20230308.csv" # name of your file with masses
+titrationfile<-'20230308_LZ.CSV'# name of the last titration file run
 
 
 # Date that the data were run
-date<-'20230221'
+date<-'20230308'
 
 
 #DO NOT CHANGE ANYTHING BELOW THIS LINE UNLESS A NEW BOTTLE OF ACID IS USED

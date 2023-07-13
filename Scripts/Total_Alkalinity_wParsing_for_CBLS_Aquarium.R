@@ -233,7 +233,7 @@ tail(update.data)
 
 
 #export data as csv file to Data directory 
-write.table(update.data,"../../../../CBLS_Wetlab/CBLS_Aquarium_TA.csv",sep=",", row.names=FALSE) 
+write.table(update.data,"../../../../CBLS_Wetlab/Data/CBLS_Aquarium_TA.csv",sep=",", row.names=FALSE) 
 
 
 

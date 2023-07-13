@@ -38,8 +38,8 @@ library(tidyverse)
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
 
 path<-"../../../Data/BlueTank_Titrations/20230713" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_CRM_20230713.csv" # name of your file with masses
-titrationfile<-'20230713_DMBP_CRM.CSV'# name of the last titration file run
+massfile<-"Mass_20230713.csv" # name of your file with masses
+titrationfile<-'20230713_DMBP.CSV'# name of the last titration file run
 
 
 # Date that the data were run
@@ -221,7 +221,7 @@ TA[,3:4]<-sapply(TA[,3:4], as.numeric) # make sure the appropriate columns are n
 write.table(TA,paste0(path,"/","TA_Output_",titrationfile),sep=",", row.names=FALSE)
 
 #Cumulative TA
-cumu.data <- read.csv("Data/CBLS_Aquarium_TA.csv", header=TRUE, sep=",")
+cumu.data <- read.csv("../../../Data/CBLS_Aquarium_TA.csv", header=TRUE, sep=",")
 update.data <- rbind(cumu.data, TA)
 #exports your data as a CSV file to folder of the day e.g. 20220720
 
@@ -233,7 +233,7 @@ tail(update.data)
 
 
 #export data as csv file to Data directory 
-write.table(update.data,"../CBLS_Wetlab/CBLS_Aquarium_TA.csv",sep=",", row.names=FALSE) 
+write.table(update.data,"../../../../CBLS_Wetlab/CBLS_Aquarium_TA.csv",sep=",", row.names=FALSE) 
 
 
 

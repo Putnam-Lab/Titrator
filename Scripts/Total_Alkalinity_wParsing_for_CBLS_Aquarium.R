@@ -30,8 +30,8 @@ library(seacarb) #used to calculate TA
 ## you need to check that the version installed is version 3.2, not version 3.3.1 which is the newest version of the "seacarb"
 ## package as of 20220822
 ## LZ replaced v 3.3.1 with version 3.2 from the CRAN archive (https://cran.r-project.org/src/contrib/Archive/seacarb/) 20220822
-
-
+## packageurl <- "https://cran.r-project.org/src/contrib/Archive/seacarb/seacarb_3.2.2.tar.gz"
+## install.packages(packageurl, repos=NULL, type="source")
 
 library(tidyverse)
 

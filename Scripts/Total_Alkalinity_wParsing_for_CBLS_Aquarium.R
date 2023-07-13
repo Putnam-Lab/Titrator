@@ -24,20 +24,22 @@ rm(list=ls()) # sweep environment
 
 #set working directory---------------------------------------------------------------------------------------------
 
-
-setwd("C:/Users/PPP Lab/Documents/Titrator")
-main<-getwd()
-getwd()
-
 #load libraries----------------------------------------------
 library(seacarb) #used to calculate TA
+## NOTE: newer versions of the seacarb package have a hard time recognizing the "at" function
+## you need to check that the version installed is version 3.2, not version 3.3.1 which is the newest version of the "seacarb"
+## package as of 20220822
+## LZ replaced v 3.3.1 with version 3.2 from the CRAN archive (https://cran.r-project.org/src/contrib/Archive/seacarb/) 20220822
+
+
+
 library(tidyverse)
 
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
 
-path<-"Data/BlueTank_Titrations/20230713/" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_CRM_20230713.csv" # name of your file with masses
-titrationfile<-'20230713_DMBP_CRM.CSV'# name of the last titration file run
+path<-"../../../Data/BlueTank_Titrations" #the location of all your titration files, your folder of the day!
+massfile<-"20230713/Mass_CRM_20230713.csv" # name of your file with masses
+titrationfile<-'20230713/20230713_DMBP_CRM.CSV'# name of the last titration file run
 
 
 # Date that the data were run
@@ -56,7 +58,7 @@ Mass<-read.csv(file.path(path,massfile), header=T, sep=",", na.string="NA", as.i
 
 #### pH Calibration #####
 
-pHCal<-read.csv("Data/pHCalibration.csv") # read in the pH Calibration file
+pHCal<-read.csv("../../../Data/pHCalibration.csv") # read in the pH Calibration file
 
 
 

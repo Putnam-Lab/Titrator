@@ -34,14 +34,14 @@ library(seacarb) #used to calculate TA
 ## you need to check that the version installed is version 3.2, not version 3.3.1 which is the newest version of the "seacarb"
 ## package as of 20220822
 ## LZ replaced v 3.3.1 with version 3.2 from the CRAN archive (https://cran.r-project.org/src/contrib/Archive/seacarb/) 20220822
-library(tidyverse)
+library(tidyr)
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
-path<-"Data/Federica_Haifa/20220914" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_CRM2_20220914.csv"  #name of the mass file 
-titrationfile<-'20220914.csv'# name of the last titration file run
+path<-"Data/Federica_Haifa/20230601" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_CRM_20230601.csv"  #name of the mass file 
+titrationfile<-'20230601_CRM.csv'# name of the last titration file run
 
 # Date that the data were run
-date<-'20220914'
+date<-'20230601'
 
 #DO NOT CHANGE ANYTHING BELOW THIS LINE UNLESS A NEW BOTTLE OF ACID IS USED
 

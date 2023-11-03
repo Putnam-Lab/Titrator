@@ -30,20 +30,20 @@ library(seacarb) #used to calculate TA
 ## you need to check that the version installed is version 3.2, not version 3.3.1 which is the newest version of the "seacarb"
 ## package as of 20220822
 ## LZ replaced v 3.3.1 with version 3.2 from the CRAN archive (https://cran.r-project.org/src/contrib/Archive/seacarb/) 20220822
-## packageurl <- "https://cran.r-project.org/src/contrib/Archive/seacarb/seacarb_3.2.tar.gz"
-## install.packages(packageurl, repos=NULL, type="source")
+packageurl <- "https://cran.r-project.org/src/contrib/Archive/seacarb/seacarb_3.2.tar.gz"
+install.packages(packageurl, repos=NULL, type="source")
 
 library(tidyverse)
 
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
 
-path<-"../../../Data/BlueTank_Titrations/20230713" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_20230713.csv" # name of your file with masses
-titrationfile<-'20230713_DMBP.CSV'# name of the last titration file run
+path<-"Titrator/Data/BlueTank_Titrations/20231103" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_CRM_20231103.csv" # name of your file with masses
+titrationfile<-'20231103_CRM.CSV'# name of the last titration file run
 
 
 # Date that the data were run
-date<-'20230713'
+date<-'20231103'
 
 
 #DO NOT CHANGE ANYTHING BELOW THIS LINE UNLESS A NEW BOTTLE OF ACID IS USED
@@ -58,7 +58,7 @@ Mass<-read.csv(file.path(path,massfile), header=T, sep=",", na.string="NA", as.i
 
 #### pH Calibration #####
 
-pHCal<-read.csv("../../../Data/pHCalibration.csv") # read in the pH Calibration file
+pHCal<-read.csv("Titrator/Data/pHCalibration.csv") # read in the pH Calibration file
 
 
 

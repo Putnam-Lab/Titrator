@@ -37,23 +37,22 @@ library(tidyverse)
 
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
 
-<<<<<<< HEAD
+## <<<<<<< HEAD
 path<-"Titrator/Data/BlueTank_Titrations/20231103" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_CRM_20231103.csv" # name of your file with masses
-titrationfile<-'20231103_CRM.CSV'# name of the last titration file run
+massfile<-"Mass_20231103.csv" # name of your file with masses
+titrationfile<-'20231103_blue_tank.csv'# name of the last titration file run
 
 
 # Date that the data were run
 date<-'20231103'
-=======
-path<-"../Data/BlueTank_Titrations/20230816/" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_20230816_LHZ_run2.csv" # name of your file with masses
+path<-"../Data/BlueTank_Titrations/20231103/" #the location of all your titration files, your folder of the day!
+massfile<-"" # name of your file with masses
 titrationfile<-'20230816_LHZ_run2.csv'# name of the last titration file run
 
 
 # Date that the data were run
-date<-'20230816'
->>>>>>> 2cb9995ae686922b5b2f5196509c6fec94cba61f
+date<-'20231103'
+## >>>>>>> 2cb9995ae686922b5b2f5196509c6fec94cba61f
 
 
 #DO NOT CHANGE ANYTHING BELOW THIS LINE UNLESS A NEW BOTTLE OF ACID IS USED
@@ -68,11 +67,11 @@ Mass<-read.csv(file.path(path,massfile), header=T, sep=",", na.string="NA", as.i
 
 #### pH Calibration #####
 
-<<<<<<< HEAD
+
 pHCal<-read.csv("Titrator/Data/pHCalibration.csv") # read in the pH Calibration file
-=======
+
 pHCal<-read.csv("../Data/pHCalibration.csv") # read in the pH Calibration file
->>>>>>> 2cb9995ae686922b5b2f5196509c6fec94cba61f
+
 
 
 

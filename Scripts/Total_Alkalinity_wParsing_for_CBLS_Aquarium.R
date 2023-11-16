@@ -38,14 +38,14 @@ library(tidyverse)
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
 
 ## <<<<<<< HEAD
-path<-"Titrator/Data/BlueTank_Titrations/20231103" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_20231103.csv" # name of your file with masses
-titrationfile<-'20231103_blue_tank.csv'# name of the last titration file run
+path<-"Titrator/Data/BlueTank_Titrations/20231110" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_20231110.csv" # name of your file with masses
+titrationfile<-'20231110_blue_tank.csv'# name of the last titration file run
 
 
 # Date that the data were run
-date<-'20231103'
-path<-"../Data/BlueTank_Titrations/20231103/" #the location of all your titration files, your folder of the day!
+date<-'20231110'
+path<-"../../../Titrator/Data/BlueTank_Titrations/20231110/" #the location of all your titration files, your folder of the day!
 massfile<-"" # name of your file with masses
 titrationfile<-'20230816_LHZ_run2.csv'# name of the last titration file run
 
@@ -70,7 +70,7 @@ Mass<-read.csv(file.path(path,massfile), header=T, sep=",", na.string="NA", as.i
 
 pHCal<-read.csv("Titrator/Data/pHCalibration.csv") # read in the pH Calibration file
 
-pHCal<-read.csv("../Data/pHCalibration.csv") # read in the pH Calibration file
+pHCal<-read.csv("../../../Titrator/Data/pHCalibration.csv") # read in the pH Calibration file
 
 
 
@@ -142,7 +142,6 @@ sample_names_list <- list()
 for (item in 1:length(sample_names)){
   sample_names_list[[item]] <- sample_names[item]
 }
-
 
 # fill the list with the data from each sample
 for (i in 1:nrows){

@@ -39,8 +39,8 @@ library(tidyverse)
 
 ## <<<<<<< HEAD
 path<-"Titrator/Data/BlueTank_Titrations/20231116" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_CRM_20231116.csv" # name of your file with masses
-titrationfile<-'20231116_CRM.csv'# name of the last titration file run
+massfile<-"Mass_20231116.csv" # name of your file with masses
+titrationfile<-'20231116.csv'# name of the last titration file run
 
 
 # Date that the data were run

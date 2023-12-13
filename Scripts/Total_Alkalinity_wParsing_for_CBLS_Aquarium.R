@@ -38,21 +38,12 @@ library(tidyverse)
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
 
 ## <<<<<<< HEAD
-path<-"Titrator/Data/BlueTank_Titrations/20231116" #the location of all your titration files, your folder of the day!
-massfile<-"Mass_20231116.csv" # name of your file with masses
-titrationfile<-'20231116.csv'# name of the last titration file run
+massfile<-"Mass_20231128.csv" # name of your file with masses
+titrationfile<-'20231128.csv'# name of the last titration file run
+date<-'20231128' #date that data was run
+path<-"../Data/BlueTank_Titrations/20231128/" #the location of all your titration files, your folder of the day!
 
 
-# Date that the data were run
-getwd()
-date<-'20231116'
-path<-"../Data/BlueTank_Titrations/20231116/" #the location of all your titration files, your folder of the day!
-massfile<-"" # name of your file with masses
-titrationfile<-'20230816_LHZ_run2.csv'# name of the last titration file run
-
-
-# Date that the data were run
-date<-'20231116'
 ## >>>>>>> 2cb9995ae686922b5b2f5196509c6fec94cba61f
 
 
@@ -68,8 +59,6 @@ Mass<-read.csv(file.path(path,massfile), header=T, sep=",", na.string="NA", as.i
 
 #### pH Calibration #####
 
-
-pHCal<-read.csv("Titrator/Data/pHCalibration.csv") # read in the pH Calibration file
 
 pHCal<-read.csv("../Data/pHCalibration.csv") # read in the pH Calibration file
 
@@ -117,6 +106,7 @@ pH3<-mod.pH$coefficients[1]+mod.pH$coefficients[2]*3
 #create an empty matrix to put the TA values in
 
 nrows<-nrow(Mass) #need file length/number of rows
+
 
 TA <- data.frame(matrix(nrow = nrows, ncol = 5)) # changed from 4 columns to 5 LZ 20220720
 

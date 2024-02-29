@@ -40,7 +40,7 @@ library(tidyverse)
 
 ## <<<<<<< HEAD
 massfile<-"Mass_20240229_CRM.csv" # name of your file with masses
-titrationfile<-'20240229_cbls_crm.csv'# name of the last titration file run
+titrationfile<-'20240229_cbls_CRM.csv'# name of the last titration file run
 date<-'20240229' #date that data was run
 path<-"../Data/BlueTank_Titrations/20240229/" #the location of all your titration files, your folder of the day!
 
@@ -62,8 +62,6 @@ Mass<-read.csv(file.path(path,massfile), header=T, sep=",", na.string="NA", as.i
 
 
 pHCal<-read.csv("../Data/pHCalibration.csv") # read in the pH Calibration file
-
-
 
 
 
@@ -169,7 +167,7 @@ for(i in 1:nrows) {
   #calculates the index of values between pH 2 and 3.5 
   
   mV<-which(Data$mV<pH3 & Data$mV>pH35) 
-  
+ 
   
   
   #CHANGE ONLY WHEN NEW BOTTLE OF ACID IS USED----------------------------------
@@ -181,7 +179,7 @@ for(i in 1:nrows) {
   
   #Danielle Becker updated script and changed acid to new batch #A22 on 20220127
   
-  d<- (-0.00000400*mean(Data$Temperature[mV], na.rm=T)^2-0.0001116*mean(Data$Temperature[mV], na.rm=T)+1.02881) #20220127 Batch A22 DMBP
+  d <- (-0.00000400*mean(Data$Temperature[mV], na.rm=T)^2-0.0001116*mean(Data$Temperature[mV], na.rm=T)+1.02881) #20220127 Batch A22 DMBP
   
   
   #concentration of your titrant: CHANGE EVERYTIME ACID IS CHANGED 

@@ -39,10 +39,10 @@ library(tidyverse)
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
 
 ## <<<<<<< HEAD
-massfile<-"Mass_20240229_samples.csv" # name of your file with masses
-titrationfile<-'20240229_cbls_samples.csv'# name of the last titration file run
-date<-'20240229' #date that data was run
-path<-"../Data/BlueTank_Titrations/20240229/" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_20240320_CRM.csv" # name of your file with masses
+titrationfile<-'20240320_cbls_CRM.csv'# name of the last titration file run
+date<-'20240320' #date that data was run
+path<-"../Data/BlueTank_Titrations/20240320/" #the location of all your titration files, your folder of the day!
 
 
 ## 

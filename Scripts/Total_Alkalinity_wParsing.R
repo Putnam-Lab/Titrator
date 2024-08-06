@@ -39,10 +39,10 @@ library(tidyverse)
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
 
 ## <<<<<<< HEAD
-massfile<-"Mass_20240725_samples.csv" # name of your file with masses
-titrationfile<-'20240725_CBLS_Samples.csv'# name of the last titration file run
-date<-'20240725' #date that data was run
-path<-"../Data/BlueTank_Titrations/20240725" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_20240806_CRM.csv" # name of your file with masses
+titrationfile<-'20240806_CBLS_CRM.csv'# name of the last titration file run
+date<-'20240806' #date that data was run
+path<-"../../Titrator/Data/BlueTank_Titrations/20240806" #the location of all your titration files, your folder of the day!
 
 
 
@@ -62,7 +62,7 @@ Mass<-read.csv(file.path(path,massfile), header=T, sep=",", na.string="NA", as.i
 #### pH Calibration #####
 
 
-pHCal<-read.csv("../Data/pHCalibration.csv") # read in the pH Calibration file
+pHCal<-read.csv("../../Titrator/Data/pHCalibration.csv") # read in the pH Calibration file
 
 
 
@@ -224,7 +224,7 @@ TA[,3:4]<-sapply(TA[,3:4], as.numeric) # make sure the appropriate columns are n
 write.table(TA,paste0(path,"/","TA_Output_",titrationfile),sep=",", row.names=FALSE)
 
 #Cumulative TA
-cumu.data <- read.csv("../Data/Cumulative_TA_Output.csv", header=TRUE, sep=",")
+cumu.data <- read.csv("../../Titrator/Data/Cumulative_TA_Output.csv", header=TRUE, sep=",")
 update.data <- rbind(cumu.data, TA)
 
 #check that your new data has been appended to the cumulative TA dataframe (added 20220623 by LZ)
@@ -232,5 +232,5 @@ tail(update.data)
 
 getwd()
 #export data as csv file
-write.table(update.data,"../Data/Cumulative_TA_Output.csv",sep=",", row.names=FALSE)
+write.table(update.data,"../../Titrator/Data/Cumulative_TA_Output.csv",sep=",", row.names=FALSE)
 

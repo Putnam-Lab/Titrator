@@ -28,7 +28,6 @@ rm(list=ls()) # sweep environment
 #set working directory---------------------------------------------------------------------------------------------
 
 #load libraries----------------------------------------------
-library(seacarb) #used to calculate TA
 ## NOTE: newer versions of the seacarb package have a hard time recognizing the "at" function
 ## you need to check that the version installed is version 3.2, not version 3.3.1 which is the newest version of the "seacarb"
 ## package as of 20220822
@@ -36,13 +35,14 @@ library(seacarb) #used to calculate TA
 packageurl <- "https://cran.r-project.org/src/contrib/Archive/seacarb/seacarb_3.2.tar.gz"
 install.packages(packageurl, repos=NULL, type="source")
 
+library(seacarb) #used to calculate TA
 library(tidyverse)
 
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
 
 ## <<<<<<< HEAD
-massfile<-"Mass_20240917_CRM.csv" # name of your file with masses
-titrationfile<-'20240917_CBLS_CRM.csv'# name of the last titration file run
+massfile<-"Mass_20240917_Samples.csv" # name of your file with masses
+titrationfile<-'20240917_CBLS_Samples.csv'# name of the last titration file run
 date<-'20240917' #date that data was run
 path<-"../Data/BlueTank_Titrations/20240917" #the location of all your titration files, your folder of the day!
 

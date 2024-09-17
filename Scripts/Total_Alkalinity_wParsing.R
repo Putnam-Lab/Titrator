@@ -1,3 +1,5 @@
+
+
 #Calculate total alkalinity using potentiometric titrations
 #Calculate total alkalinity using potentiometric titrations
 #Uses a for loop to read in data exported as a titration file and calculate Total alkalinity
@@ -39,10 +41,10 @@ library(tidyverse)
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
 
 ## <<<<<<< HEAD
-massfile<-"Mass_20240827_Samples.csv" # name of your file with masses
-titrationfile<-'20240827_CBLS_Samples.csv'# name of the last titration file run
-date<-'20240827' #date that data was run
-path<-"../Data/BlueTank_Titrations/20240827" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_20240917_CRM.csv" # name of your file with masses
+titrationfile<-'20240917_CBLS_CRM.csv'# name of the last titration file run
+date<-'20240917' #date that data was run
+path<-"../Data/BlueTank_Titrations/20240917" #the location of all your titration files, your folder of the day!
 
 
 

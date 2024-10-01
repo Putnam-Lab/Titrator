@@ -27,6 +27,7 @@ rm(list=ls()) # sweep environment
 
 #set working directory---------------------------------------------------------------------------------------------
 
+setwd("C:/Users/swimg/OneDrive/Desktop/Putnam-Lab/Titrator")
 #load libraries----------------------------------------------
 ## NOTE: newer versions of the seacarb package have a hard time recognizing the "at" function
 ## you need to check that the version installed is version 3.2, not version 3.3.1 which is the newest version of the "seacarb"
@@ -41,10 +42,10 @@ library(tidyverse)
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
 
 ## <<<<<<< HEAD
-massfile<-"Mass_20240917_CRM.csv" # name of your file with masses
-titrationfile<-'20240917_CBLS_CRM.csv'# name of the last titration file run
-date<-'20240917' #date that data was run
-path<-"../Data/BlueTank_Titrations/20240917/" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_20241001_CRM.csv" # name of your file with masses
+titrationfile<-'20241001_CBLS_CRM.csv'# name of the last titration file run
+date<-'20241001' #date that data was run
+path<-"C:/Users/swimg/OneDrive/Desktop/Putnam-Lab/Titrator/Data/BlueTank_Titrations/20241001" #the location of all your titration files, your folder of the day!
 
 
 
@@ -64,7 +65,7 @@ Mass<-read.csv(file.path(path,massfile), header=T, sep=",", na.string="NA", as.i
 #### pH Calibration #####
 
 
-pHCal<-read.csv("../Data/pHCalibration.csv") # read in the pH Calibration file
+pHCal<-read.csv("Data/pHCalibration.csv") # read in the pH Calibration file
 
 
 
@@ -130,6 +131,7 @@ sample_name_positions <- c(1,grep("^Scope", AllData[,1]), nrow(AllData))
 
 ## parse through all the data in the one file ###
 sample_names<-Mass$Sample.ID1
+
 # create a list with all the sample IDs
 sample_names_list <- list()
 for (item in 1:length(sample_names)){
@@ -226,7 +228,7 @@ TA[,3:4]<-sapply(TA[,3:4], as.numeric) # make sure the appropriate columns are n
 write.table(TA,paste0(path,"/","TA_Output_",titrationfile),sep=",", row.names=FALSE)
 
 #Cumulative TA
-cumu.data <- read.csv("../Data/Cumulative_TA_Output.csv", header=TRUE, sep=",")
+cumu.data <- read.csv("Data/Cumulative_TA_Output.csv", header=TRUE, sep=",")
 update.data <- rbind(cumu.data, TA)
 
 #check that your new data has been appended to the cumulative TA dataframe (added 20220623 by LZ)
@@ -234,5 +236,5 @@ tail(update.data)
 
 getwd()
 #export data as csv file
-write.table(update.data,"../Data/Cumulative_TA_Output.csv",sep=",", row.names=FALSE)
+write.table(update.data,"Data/Cumulative_TA_Output.csv",sep=",", row.names=FALSE)
 

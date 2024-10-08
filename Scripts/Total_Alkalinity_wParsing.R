@@ -183,18 +183,20 @@ for(i in 1:nrows) {
   #d<-(-0.00000410*mean(Data$Temperature[mV], na.rm=T)^2-0.0001065*mean(Data$Temperature[mV], na.rm=T)+1.02884) #20190731 Batch A16
   
   #Danielle Becker updated script and changed acid to new batch #A22 on 20220127
+  #d <- (-0.00000400*mean(Data$Temperature[mV], na.rm=T)^2-0.0001116*mean(Data$Temperature[mV], na.rm=T)+1.02881) #20220127 Batch A22 DMBP
   
-  d <- (-0.00000400*mean(Data$Temperature[mV], na.rm=T)^2-0.0001116*mean(Data$Temperature[mV], na.rm=T)+1.02881) #20220127 Batch A22 DMBP
+  #Florence Fields updated script on 20241008 with the current batch opened 20240613 #A24
+ 
+  d <- (-0.00000410*mean(Data$Temperature[mV], na.rm=T)^2-0.0001069*mean(Data$Temperature[mV], na.rm=T)+1.02881) #20220127 Batch A22 DMBP
   
   
   #concentration of your titrant: CHANGE EVERYTIME ACID IS CHANGED 
   
   #c<-0.100010 ##Batch A16 first used by SJG on 20190731
   
-  c<-0.100347 ##Batch A22 first used by DMBP on 20220127
+  #c<-0.100347 ##Batch A22 first used by DMBP on 20220127
   
-  
-  
+  c<-0.099922 ##Batch A24 currently in use since 20240613 -FF
   
   
   #------------------------------------------------------------------------------

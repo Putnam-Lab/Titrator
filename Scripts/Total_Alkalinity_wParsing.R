@@ -187,7 +187,7 @@ for(i in 1:nrows) {
   
   #Florence Fields updated script on 20241008 with the current batch opened 20240613 #A24
  
-  d <- (-0.00000410*mean(Data$Temperature[mV], na.rm=T)^2-0.0001069*mean(Data$Temperature[mV], na.rm=T)+1.02881) #20220127 Batch A22 DMBP
+  d <- (-0.00000410*mean(Data$Temperature[mV], na.rm=T)^2-0.0001069*mean(Data$Temperature[mV], na.rm=T)+1.02881) #20240613 Batch A24 FF
   
   
   #concentration of your titrant: CHANGE EVERYTIME ACID IS CHANGED 

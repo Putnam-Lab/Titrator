@@ -42,10 +42,10 @@ library(tidyverse)
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
 
 ## <<<<<<< HEAD
-massfile<-"Mass_20241213_Samples.csv" # name of your file with masses
-titrationfile<-'20241213_CBLS_Samples.csv'# name of the last titration file run
-date<-'20241213' #date that data was run
-path<-"C:/Users/swimg/OneDrive/Desktop/Putnam-Lab/Titrator/Data/BlueTank_Titrations/20241213" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_20250130_CRM3.csv" # name of your file with masses
+titrationfile<-'20250130_CBLS_CRM3.csv'# name of the last titration file run
+date<-'20250130' #date that data was run
+path<-"C:/Users/swimg/OneDrive/Desktop/Putnam-Lab/Titrator/Data/BlueTank_Titrations/20250130" #the location of all your titration files, your folder of the day!
 
 
 
@@ -84,6 +84,7 @@ mod.pH<-lm(c(pHData$pH4, pHData$pH7, pHData$pH10)~c(4,7,10)) # linear model
 # print a plot of the relationship between pH and mV
 
 png(paste0(path,"/",Sys.Date(),'pHmvplot.png'), height = 400, width = 400)
+
 
 plot(c(4,7,10), c(pHData$pH4, pHData$pH7, pHData$pH10), xlab = 'pH', ylab = 'mv')
 

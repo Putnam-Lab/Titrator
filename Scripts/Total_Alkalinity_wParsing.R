@@ -20,7 +20,7 @@
 #modified 20210318 Danielle Becker - opened a new acid titrant, same batch #A16
 #new acid bottle 20220127 by Danielle Becker - new batch number A22, updated script calculation
 # modified 20220720 by Lauren Zane - added date column for each sample; create cumulative TA .csv for CBLS aquarium titrations (URI)
-
+## modified 20241008 by Florence Fields - new batch number A24, updated script calculation 
 
 #------------------------------------------------------------
 rm(list=ls()) # sweep environment
@@ -42,10 +42,10 @@ library(tidyverse)
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
 
 ## <<<<<<< HEAD
-massfile<-"Mass_20250502_Samples.csv" # name of your file with masses
-titrationfile<-'20250502_CBLS_Samples.csv'# name of the last titration file run
-date<-'20250502' #date that data was run
-path<-"Data/BlueTank_Titrations/20250502" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_20250604_Samples.csv" # name of your file with masses
+titrationfile<-'20250604_CBLS_Samples.csv'# name of the last titration file run
+date<-'20250604' #date that data was run
+path<-"Data/BlueTank_Titrations/20250604" #the location of all your titration files, your folder of the day!
 
 
 

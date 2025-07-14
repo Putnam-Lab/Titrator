@@ -21,13 +21,14 @@
 #new acid bottle 20220127 by Danielle Becker - new batch number A22, updated script calculation
 # modified 20220720 by Lauren Zane - added date column for each sample; create cumulative TA .csv for CBLS aquarium titrations (URI)
 ## modified 20241008 by Florence Fields - new batch number A24, updated script calculation 
+## modified 20250714 by Pooja Pednekar- new batch number A14, updated script calculation
 
 #------------------------------------------------------------
 rm(list=ls()) # sweep environment
 
 #set working directory---------------------------------------------------------------------------------------------
 
-setwd("C:/Users/swimg/OneDrive/Desktop/Putnam-Lab/Titrator")
+setwd("C:/PUTNAM LAB/Titrator/Data")
 #load libraries----------------------------------------------
 ## NOTE: newer versions of the seacarb package have a hard time recognizing the "at" function
 ## you need to check that the version installed is version 3.2, not version 3.3.1 which is the newest version of the "seacarb"
@@ -42,10 +43,10 @@ library(tidyverse)
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
 
 ## <<<<<<< HEAD
-massfile<-"Mass_20250711_CRM.csv" # name of your file with masses
-titrationfile<-'20250711_CBLS_CRM.csv'# name of the last titration file run
-date<-'20250703' #date that data was run
-path<-"Data/BlueTank_Titrations/20250711" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_20250714_CRM.csv" # name of your file with masses
+titrationfile<-'20250714_CBLS_CRM.csv'# name of the last titration file run
+date<-'20250714' #date that data was run
+path<-"C:/PUTNAM LAB/Titrator/Data/BlueTank_Titrations/20250714" #the location of all your titration files, your folder of the day!
 
 
 
@@ -65,7 +66,7 @@ Mass<-read.csv(file.path(path,massfile), header=T, sep=",", na.string="NA", as.i
 #### pH Calibration #####
 
 
-pHCal<-read.csv("Data/pHCalibration.csv") # read in the pH Calibration file
+pHCal<-read.csv("C:/PUTNAM LAB/Titrator/Data/pHCalibration.csv") # read in the pH Calibration file
 
 
 
@@ -187,9 +188,11 @@ for(i in 1:nrows) {
   #d <- (-0.00000400*mean(Data$Temperature[mV], na.rm=T)^2-0.0001116*mean(Data$Temperature[mV], na.rm=T)+1.02881) #20220127 Batch A22 DMBP
   
   #Florence Fields updated script on 20241008 with the current batch opened 20240613 #A24
- 
-  d <- (-0.00000410*mean(Data$Temperature[mV], na.rm=T)^2-0.0001069*mean(Data$Temperature[mV], na.rm=T)+1.02881) #20240613 Batch A24 FF
+  #d <- (-0.00000410*mean(Data$Temperature[mV], na.rm=T)^2-0.0001069*mean(Data$Temperature[mV], na.rm=T)+1.02881) #20240613 Batch A24 FF
   
+  #Pooja Pednekar updated script on 20250714 with the new batch opened on 20250714 by HP #A14
+  
+  d <- (-0.00000410*mean(Data$Temperature[mV], na.rm=T)^2-0.0001069*mean(Data$Temperature[mV], na.rm=T)+1.02881) #20250714 Batch A14 PP
   
   #concentration of your titrant: CHANGE EVERYTIME ACID IS CHANGED 
   
@@ -197,8 +200,10 @@ for(i in 1:nrows) {
   
   #c<-0.100347 ##Batch A22 first used by DMBP on 20220127
   
-  c<-0.099922 ##Batch A24 currently in use since 20240613 -FF
+  #c<-0.099922 ##Batch A24 currently in use since 20240613 -FF
   
+  
+  c<-0.100183 ##Batch A14 currently in use since 20250714 PP
   
   #------------------------------------------------------------------------------
   
@@ -231,7 +236,7 @@ TA[,3:4]<-sapply(TA[,3:4], as.numeric) # make sure the appropriate columns are n
 write.table(TA,paste0(path,"/","TA_Output_",titrationfile),sep=",", row.names=FALSE)
 
 #Cumulative TA
-cumu.data <- read.csv("Data/Cumulative_TA_Output.csv", header=TRUE, sep=",")
+cumu.data <- read.csv("C:/PUTNAM LAB/Titrator/Data/Cumulative_TA_Output.csv", header=TRUE, sep=",")
 update.data <- rbind(cumu.data, TA)
 
 #check that your new data has been appended to the cumulative TA dataframe (added 20220623 by LZ)
@@ -239,5 +244,5 @@ tail(update.data)
 
 getwd()
 #export data as csv file
-write.table(update.data,"Data/Cumulative_TA_Output.csv",sep=",", row.names=FALSE)
+write.table(update.data,"C:/PUTNAM LAB/Titrator/Data/Cumulative_TA_Output.csv",sep=",", row.names=FALSE)
 

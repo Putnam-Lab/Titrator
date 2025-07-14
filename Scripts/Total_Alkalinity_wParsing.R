@@ -21,7 +21,7 @@
 #new acid bottle 20220127 by Danielle Becker - new batch number A22, updated script calculation
 # modified 20220720 by Lauren Zane - added date column for each sample; create cumulative TA .csv for CBLS aquarium titrations (URI)
 ## modified 20241008 by Florence Fields - new batch number A24, updated script calculation 
-## modified 20250714 by Pooja Pednekar- new batch number A14, updated script calculation
+## modified 20250714 by Pooja Pednekar- opened a new acid titrant batch #A14, updated script calculation
 
 #------------------------------------------------------------
 rm(list=ls()) # sweep environment
@@ -178,8 +178,18 @@ for(i in 1:nrows) {
   
   
   #CHANGE ONLY WHEN NEW BOTTLE OF ACID IS USED----------------------------------
+  #To obtain this information use the Certificate of Analysis from the Andrew Dickson's Labs for respective acid titrant batches.
   
-  #density of your titrant: change every time acid is changed
+  -----#For 1(d). For the density of the titrant, you will need three values highlighted in blue (in the script below). In the density section of the certificate, the formula with calculated values have all the values required. 
+    #Formula from the certificate: Density= xa- xb-xc, look below for comparing & inputing the values in the script. 
+  
+  #line 205: d <- (xc*mean(Data$Temperature[mV], na.rm=T)^2-xb*mean(Data$Temperature[mV], na.rm=T)+xa)
+  
+  
+  ----#For 2(c).Line 215: The concentration of the acid is obtained from HCl conc.= xxxxxxx ±0.000 006 mol kg^-1."xxxxx" is your value "c" (in the script below)for HCl concentration. If confused, look at the protocol for detailed explanation.
+  
+  #1. density of your titrant: change every time acid is changed 
+  #d <- (-0.0000037*mean(Data$Temperature[mV], na.rm=T)^2-0.0001233*mean(Data$Temperature[mV], na.rm=T)+1.02900) #20250714 Batch A14 PP
   
   #Batch A16 changed on 20190731 by SJG, SIlbiger used same batch
   #d<-(-0.00000410*mean(Data$Temperature[mV], na.rm=T)^2-0.0001065*mean(Data$Temperature[mV], na.rm=T)+1.02884) #20190731 Batch A16
@@ -192,9 +202,9 @@ for(i in 1:nrows) {
   
   #Pooja Pednekar updated script on 20250714 with the new batch opened on 20250714 by HP #A14
   
-  d <- (-0.00000410*mean(Data$Temperature[mV], na.rm=T)^2-0.0001069*mean(Data$Temperature[mV], na.rm=T)+1.02881) #20250714 Batch A14 PP
+  d <- (-0.0000037*mean(Data$Temperature[mV], na.rm=T)^2-0.0001233*mean(Data$Temperature[mV], na.rm=T)+1.02900) #20250714 Batch A14 PP
   
-  #concentration of your titrant: CHANGE EVERYTIME ACID IS CHANGED 
+  #2. concentration of your titrant: CHANGE EVERYTIME ACID IS CHANGED 
   
   #c<-0.100010 ##Batch A16 first used by SJG on 20190731
   
@@ -202,8 +212,7 @@ for(i in 1:nrows) {
   
   #c<-0.099922 ##Batch A24 currently in use since 20240613 -FF
   
-  
-  c<-0.100183 ##Batch A14 currently in use since 20250714 PP
+  c<-0.100183 ##Batch A14 currently in use since 20250714 PP. First used by PP on 20250714
   
   #------------------------------------------------------------------------------
   
@@ -221,7 +230,12 @@ for(i in 1:nrows) {
   #Calculate TA
   
   #at function is based on code in seacarb package by Steve Comeau, Heloise Lavigne and Jean-Pierre Gattuso
+  #NOTE: newer versions of the seacarb package have a hard time recognizing the "at" function
+  ## you need to check that the version installed is version 3.2.14, not version 3.3.1 which is the newest version of the "seacarb". 
+  #You can use the below code after uninstalling the current version of seacarb and if need a version 3.2 for the at function
   
+  #install.packages("remotes")  # if not already installed
+  #remotes::install_version("seacarb", version = "3.2.14", repos = "http://cran.us.r-project.org")
   
   TA[i,1]<-date #exports the date into output file, column 1; added by LZ 20220720
   TA[i,2]<-name #exports the sample ID into output file, column 2

@@ -43,8 +43,8 @@ library(tidyverse)
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
 
 ## <<<<<<< HEAD
-massfile<-"Mass_20250714_CRM.csv" # name of your file with masses
-titrationfile<-'20250714_CBLS_CRM.csv'# name of the last titration file run
+massfile<-"Mass_20250714_Samples.csv" # name of your file with masses
+titrationfile<-'20250714_CBLS_Samples.csv'# name of the last titration file run
 date<-'20250714' #date that data was run
 path<-"C:/PUTNAM LAB/Titrator/Data/BlueTank_Titrations/20250714" #the location of all your titration files, your folder of the day!
 
@@ -180,13 +180,13 @@ for(i in 1:nrows) {
   #CHANGE ONLY WHEN NEW BOTTLE OF ACID IS USED----------------------------------
   #To obtain this information use the Certificate of Analysis from the Andrew Dickson's Labs for respective acid titrant batches.
   
-  -----#For 1(d). For the density of the titrant, you will need three values highlighted in blue (in the script below). In the density section of the certificate, the formula with calculated values have all the values required. 
+  #For 1(d). For the density of the titrant, you will need three values highlighted in blue (in the script below). In the density section of the certificate, the formula with calculated values have all the values required. 
     #Formula from the certificate: Density= xa- xb-xc, look below for comparing & inputing the values in the script. 
   
   #line 205: d <- (xc*mean(Data$Temperature[mV], na.rm=T)^2-xb*mean(Data$Temperature[mV], na.rm=T)+xa)
   
   
-  ----#For 2(c).Line 215: The concentration of the acid is obtained from HCl conc.= xxxxxxx ±0.000 006 mol kg^-1."xxxxx" is your value "c" (in the script below)for HCl concentration. If confused, look at the protocol for detailed explanation.
+  #For 2(c).Line 215: The concentration of the acid is obtained from HCl conc.= xxxxxxx ±0.000 006 mol kg^-1."xxxxx" is your value "c" (in the script below)for HCl concentration. If confused, look at the protocol for detailed explanation.
   
   #1. density of your titrant: change every time acid is changed 
   #d <- (-0.0000037*mean(Data$Temperature[mV], na.rm=T)^2-0.0001233*mean(Data$Temperature[mV], na.rm=T)+1.02900) #20250714 Batch A14 PP

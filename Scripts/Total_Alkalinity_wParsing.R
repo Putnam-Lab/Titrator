@@ -43,8 +43,8 @@ library(tidyverse)
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
 
 ## <<<<<<< HEAD
-massfile<-"Mass_20251002_CRM.csv" # name of your file with masses
-titrationfile<-'20251002_CBLS_CRM.csv'# name of the last titration file run
+massfile<-"Mass_20251002_Samples.csv" # name of your file with masses
+titrationfile<-'20251002_CBLS_Samples.csv'# name of the last titration file run
 date<-'20251002' #date that data was run
 path<-"C:/PUTNAM LAB/Titrator/Data/BlueTank_Titrations/20251002" #the location of all your titration files, your folder of the day!
 
@@ -236,6 +236,7 @@ for(i in 1:nrows) {
   
   #install.packages("remotes")  # if not already installed
  #remotes::install_version("seacarb", version = "3.2.14", repos = "http://cran.us.r-project.org")
+ #library(seacarb)
   
   TA[i,1]<-date #exports the date into output file, column 1; added by LZ 20220720
   TA[i,2]<-name #exports the sample ID into output file, column 2

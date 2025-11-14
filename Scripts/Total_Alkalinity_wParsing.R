@@ -43,10 +43,10 @@ library(tidyverse)
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
 
 ## <<<<<<< HEAD
-massfile<-"Mass_20251002_Samples.csv" # name of your file with masses
-titrationfile<-'20251002_CBLS_Samples.csv'# name of the last titration file run
-date<-'20251002' #date that data was run
-path<-"C:/PUTNAM LAB/Titrator/Data/BlueTank_Titrations/20251002" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_20251114_CRM.csv" # name of your file with masses
+titrationfile<-'20251114_CBLS_CRM.csv'# name of the last titration file run
+date<-'20251114' #date that data was run
+path<-"C:/PUTNAM LAB/Titrator/Data/BlueTank_Titrations/20251114" #the location of all your titration files, your folder of the day!
 
 
 
@@ -67,7 +67,6 @@ Mass<-read.csv(file.path(path,massfile), header=T, sep=",", na.string="NA", as.i
 
 
 pHCal<-read.csv("C:/PUTNAM LAB/Titrator/Data/pHCalibration.csv") # read in the pH Calibration file
-
 
 
 #select the calibration for the correct date

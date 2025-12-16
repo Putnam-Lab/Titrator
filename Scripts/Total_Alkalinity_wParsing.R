@@ -37,16 +37,16 @@ setwd("C:/PUTNAM LAB/Titrator/Data")
 packageurl <- "https://cran.r-project.org/src/contrib/Archive/seacarb/seacarb_3.2.tar.gz"
 install.packages(packageurl, repos=NULL, type="source")
 
-library(seacarb) #used to calculate TA
+#library(seacarb) #used to calculate TA
 library(tidyverse)
 
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
 
 ## <<<<<<< HEAD
-massfile<-"Mass_20251114_Samples.csv" # name of your file with masses
-titrationfile<-'Mass_20251114_.csv'# name of the last titration file run
-date<-'20251114' #date that data was run
-path<-"C:/PUTNAM LAB/Titrator/Data/BlueTank_Titrations/20251114" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_20251216_CRM.csv" # name of your file with masses
+titrationfile<-'20251216_CBLS_CRM.csv'# name of the last titration file run
+date<-'20251216' #date that data was run
+path<-"C:/PUTNAM LAB/Titrator/Data/BlueTank_Titrations/20251216" #the location of all your titration files, your folder of the day!
 
 
 

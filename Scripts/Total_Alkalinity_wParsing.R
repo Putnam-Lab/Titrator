@@ -34,19 +34,19 @@ setwd("C:/PUTNAM LAB/Titrator/Data")
 ## you need to check that the version installed is version 3.2, not version 3.3.1 which is the newest version of the "seacarb"
 ## package as of 20220822
 ## LZ replaced v 3.3.1 with version 3.2 from the CRAN archive (https://cran.r-project.org/src/contrib/Archive/seacarb/) 20220822
-packageurl <- "https://cran.r-project.org/src/contrib/Archive/seacarb/seacarb_3.2.tar.gz"
-install.packages(packageurl, repos=NULL, type="source")
+#packageurl <- "https://cran.r-project.org/src/contrib/Archive/seacarb/seacarb_3.2.tar.gz"
+#install.packages(packageurl, repos=NULL, type="source")
 
 #library(seacarb) #used to calculate TA
-library(tidyverse)
+#library(tidyverse)
 
 #CHANGE THESE VALUES EVERY DAY----------------------------------------------
 
 ## <<<<<<< HEAD
-massfile<-"Mass_20251216_CRM.csv" # name of your file with masses
-titrationfile<-'20251216_CBLS_CRM.csv'# name of the last titration file run
-date<-'20251216' #date that data was run
-path<-"C:/PUTNAM LAB/Titrator/Data/BlueTank_Titrations/20251216" #the location of all your titration files, your folder of the day!
+massfile<-"Mass_20260603_CRM_2.csv" # name of your file with masses
+titrationfile<-'20260603_CBLS_CRM_2.csv'# name of the last titration file run
+date<-'20260603' #date that data was run
+path<-"C:/PUTNAM LAB/Titrator/Data/BlueTank_Titrations/20260603" #the location of all your titration files, your folder of the day!
 
 
 
@@ -60,6 +60,7 @@ path<-"C:/PUTNAM LAB/Titrator/Data/BlueTank_Titrations/20251216" #the location o
 #load Mass Data
 
 Mass<-read.csv(file.path(path,massfile), header=T, sep=",", na.string="NA", as.is=T) 
+
 
 
 
